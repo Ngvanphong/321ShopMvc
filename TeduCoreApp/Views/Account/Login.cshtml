@@ -1,0 +1,62 @@
+﻿@model LoginViewModel
+@{
+    ViewData["Title"] = "Đăng nhập tài khoản";
+    ViewData["MetaDescription"] = "Nếu quy khách hàng đã có tài khoản, xin mời quý khách hàng nhập vào để đăng nhập vào web.";
+    ViewData["MetaKeyword"] = "Đăng nhập, Login, Đăng nhập tài khoản";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string errorMessages = (string)TempData["ErrorMessage"];
+}
+
+<section class="main-container col1-layout">
+    <div class="main container">
+        <div class="account-login">
+            <div class="page-title">
+                <h2>Đăng nhập và đăng ký tài khoản</h2>
+            </div>
+            <fieldset class="col2-set">
+                <div class="col-1 new-users">
+                    <strong>Khách hàng chưa có tài khoản</strong>
+                    <div class="content">
+                        <p>Khách hàng hãy tạo một tài khoản để thanh toán nhanh hơn. Cảm ơn quý khách !</p>
+                        <div class="buttons-set"> 
+                            <a class="button" href="/account/register.html"><span><strong>TẠO TÀI KHOẢN</strong></span></a>                        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 registered-users">
+                    <strong>Đăng nhập</strong>
+                    <div class="content">
+                        <p>Nếu khách hàng đã có tài khoản? Xin mời đăng nhập</p>
+                        @if (errorMessages != "")
+                        {
+                            <p ><strong style="color:red">@errorMessages</strong></p>
+                        }
+
+                        <form method="post" asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]">
+                            <ul class="form-list">
+                                <li>
+                                    <label for="email">Tên tài khoản<span class="required">*</span></label>
+                                    <br>
+                                    <input asp-for="UserName" type="text" title="UserName" class="input-text required-entry" id="username" name="username">
+                                </li>
+                                <li>
+                                    <label for="pass">Mật khẩu <span class="required">*</span></label>
+                                    <br>
+                                    <input asp-for="Password" type="password" title="Password" id="password" class="input-text required-entry" name="password">
+                                </li>
+                                <li>
+                                    <label for="pass">Ghi nhớ tài khoản <span class="required">*</span></label>
+                                    <input asp-for="RememberMe" type="checkbox" style="width:10%" title="RememberMe" id="rememberMe" class="input-text required-entry " name="rememberMe">
+                                </li>
+                            </ul>
+                            <div class="buttons-set">
+                                <button id="send2" name="send" type="submit" class="button login"><span>Đăng nhập</span></button>
+                                <a class="forgot-word" href="/account/forget.html">Quên mật khẩu?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</section>

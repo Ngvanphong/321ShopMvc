@@ -1,0 +1,52 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Đăng ký tài khoản";
+    ViewData["MetaDescription"] = "Quý khách hãy đăng ký một tài khoản để được hưởng những chính sách ưu đãi tốt nhất của shop.";
+    ViewData["MetaKeyword"] = "Đăng ký tài khoản, tạo tài khoản, đăng ký tài khoản mới,tạo tài khoản mới.";
+}
+
+<h2 style="margin-left:40px">@ViewData["Title"]</h2>
+
+<div class="row">
+    <div class="col-md-8" style="margin-left:40px">
+        <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post">
+            <h4>Tạo mới một tài khoản.</h4>
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="UserName"></label>
+                <input style="width:100%" asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input style="width:100%" asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input style="width:100%" asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirmPassword"></label>
+                <input style="width:100%" asp-for="ConfirmPassword" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber"></label>
+                <input style="width:100%" asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FullName"></label>
+                <input style="width:100%" asp-for="FullName" class="form-control" />               
+            </div>
+            <button type="submit" class="btn btn-default">Đăng ký</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
