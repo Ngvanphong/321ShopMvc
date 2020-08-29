@@ -232,7 +232,7 @@ firstSlide += 1;
     <!--====== ABOUT PART ENDS ======-->
     <!--====== portfolio PART START ======-->
 
-    <section  class="portfolio-area">
+    <section class="portfolio-area">
 
         @{ foreach (ProductHomeViewModel productHome in Model.ListProductHome)
             {
@@ -260,7 +260,7 @@ firstSlide += 1;
         </div> <!-- portfolio menu -->
     </div>
 </div> <!-- row -->
-            
+
                     <div class="row grid">
                         <div class="col-lg-12 col-sm-12">
                             <div class="single-portfolio mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
@@ -275,22 +275,20 @@ firstSlide += 1;
                                         <th>Ghi Chú</th>
                                     </tr>
                                     @{ foreach (ProductViewModel product in productSub.ListProduct)
-                                                            {
-                                                                <tr>
-                                                                    <td>@product.Name</td>
-                                                                    <td>@product.Price</td>
-                                                                    <td>@product.ProductStatus</td>
-                                                                    <td>@product.MadeIn</td>
-                                                                    <td>@product.Comment</td>
-                                                                </tr>
-                                                            } 
-                                        }
+                                        {
+                    <tr>
+                        <td>@product.Name</td>
+                        <td>@product.Price</td>
+                        <td>@product.ProductStatus</td>
+                        <td>@product.MadeIn</td>
+                        <td>@product.Comment</td>
+                    </tr>
+ } }
 
                                 </table>
                             </div> <!-- single portfolio -->
                         </div>
-                    </div> <!-- row -->
-        } }
+                    </div> <!-- row --> } }
 </div> <!-- container --> } }
     </section>
 
@@ -350,5 +348,20 @@ firstSlide += 1;
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
     <script src="~/assets/js/clock.js"></script>
     <!-- JavaScript Includes -->
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5c5a2e4d7cf662208c94390a/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+
 </body>
 </html>
