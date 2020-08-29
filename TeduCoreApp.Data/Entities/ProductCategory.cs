@@ -48,7 +48,7 @@ namespace TeduCoreApp.Data.Entities
         [MaxLength(255)]
         public string Image { get; set; }
 
-        public bool? HomeFlag { get; set; }
+        public bool HomeFlag { get; set; }
 
         public DateTime DateCreated { set; get; }
         public DateTime DateModified { set; get; }
@@ -58,6 +58,7 @@ namespace TeduCoreApp.Data.Entities
         [MaxLength(255)]
         public string SeoPageTitle { set; get; }
 
+        [Required]
         [Column(TypeName = "varchar(255)")]
         public string SeoAlias { set; get; }
 

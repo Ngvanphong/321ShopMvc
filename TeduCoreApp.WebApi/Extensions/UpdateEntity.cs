@@ -1,10 +1,6 @@
 ﻿using System;
 using TeduCoreApp.Data.Entities;
-using TeduCoreApp.Data.ViewModels.Advertistment;
-using TeduCoreApp.Data.ViewModels.Bill;
-using TeduCoreApp.Data.ViewModels.Blog;
 using TeduCoreApp.Data.ViewModels.Identity;
-using TeduCoreApp.Data.ViewModels.Pantner;
 using TeduCoreApp.Data.ViewModels.Permission;
 using TeduCoreApp.Data.ViewModels.Product;
 using TeduCoreApp.Data.ViewModels.Slide;
@@ -60,21 +56,7 @@ namespace TeduCoreApp.WebApi.Extensions
             appRole.Description = appRoleVm.Description;
         }
 
-        public static void UpdateBlog(this Blog blog, BlogViewModel blogVm)
-        {
-            blog.Name = blogVm.Name;
-            blog.Image = blogVm.Image;
-            blog.Status = blogVm.Status;
-            blog.HomeFlag = blogVm.HomeFlag;
-            blog.HotFlag = blogVm.HotFlag;
-            blog.SeoPageTitle = blogVm.SeoPageTitle;
-            blog.SeoAlias = blogVm.SeoAlias;
-            blog.SeoKeywords = blogVm.SeoKeywords;
-            blog.SeoDescription = blogVm.SeoDescription;
-            blog.Tags = blogVm.Tags;
-            blog.Content = blogVm.Content;
-            blog.Description = blogVm.Description;
-        }
+      
 
         public static void UpdateSlide(this Slide slide, SlideViewModel slideVm)
         {
@@ -88,37 +70,7 @@ namespace TeduCoreApp.WebApi.Extensions
             slide.OrtherPageHome = slideVm.OrtherPageHome;
         }
 
-        public static void UpdateBillDetail(this BillDetail billDetail, BillDetailViewModel billDetailVm)
-        {
-            billDetail.BillId = billDetailVm.BillId;
-            billDetail.ProductId = billDetailVm.ProductId;
-            billDetail.Quantity = billDetailVm.Quantity;
-            billDetail.Price = billDetailVm.Price;
-            billDetail.ColorId = billDetailVm.ColorId;
-            billDetail.SizeId = billDetailVm.SizeId;
-        }
-
-        public static void UpdateAdvertistment(this Advertistment advertistment, AdvertistmentViewModel advertistmentVm)
-        {
-            advertistment.Name = advertistmentVm.Name;
-            advertistment.Description = advertistmentVm.Description;
-            advertistment.Image = advertistmentVm.Image;
-            advertistment.Url = advertistmentVm.Url;
-            advertistment.PositionId = advertistmentVm.PositionId;
-            advertistment.PageId = advertistmentVm.PageId;
-            advertistment.Status = advertistmentVm.Status;
-            advertistment.DateModified = DateTime.Now;
-            advertistment.SortOrder = advertistmentVm.SortOrder;
-        }
-
-        public static void UpdatePantner(this Pantner pantner, PantnerViewModel pantnerVm)
-        {
-            pantner.Name = pantnerVm.Name;
-            pantner.Image = pantnerVm.Image;
-            pantner.Status = pantnerVm.Status;
-            pantner.Url = pantnerVm.Url;
-        }
-
+      
         public static void UpdateSystemConfig(this SystemConfig systemConfig, SystemConfigViewModel systemConfigVm)
         {
             systemConfig.Name = systemConfigVm.Name;
@@ -135,20 +87,11 @@ namespace TeduCoreApp.WebApi.Extensions
             productDb.Name = productVm.Name;
             productDb.CategoryId = productVm.CategoryId;
             productDb.Price = productVm.Price;
-            productDb.OriginalPrice = productVm.OriginalPrice;
-            productDb.PromotionPrice = productVm.PromotionPrice;
-            productDb.Description = productVm.Description;
-            productDb.Content = productVm.Content;
-            productDb.HomeFlag = productVm.HomeFlag;
-            productDb.HotFlag = productVm.HotFlag;
-            productDb.Tag = productVm.Tag;
-            productDb.Unit = productVm.Unit;
             productDb.Status = productVm.Status;
-            productDb.SeoPageTitle = productVm.SeoPageTitle;
-            productDb.SeoAlias = productVm.SeoAlias;
-            productDb.SeoKeywords = productVm.SeoKeywords;
-            productDb.SeoDescription = productVm.SeoDescription;
-            productDb.ThumbnailImage = productVm.ThumbnailImage;
+            productDb.MadeIn = productVm.MadeIn;
+            productDb.Model = productVm.Model;
+            productDb.Comment = productVm.Comment;
+            productDb.ProductStatus = productVm.ProductStatus;
         }
     }
 }

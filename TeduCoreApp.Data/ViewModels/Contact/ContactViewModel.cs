@@ -21,16 +21,16 @@ namespace TeduCoreApp.Data.ViewModels.Contact
         public string Email { set; get; }
 
         [StringLength(250)]
-        public string Website { set; get; }
-
-        [StringLength(250)]
         public string Address { set; get; }
 
-        public string Other { set; get; }
+        [StringLength(250)]
+        public string Bank1 { set; get; }
 
-        public double? Lat { set; get; }
+        [StringLength(250)]
+        public string Bank2 { set; get; }
 
-        public double? Lng { set; get; }
+        [StringLength(250)]
+        public string Bank3 { set; get; }
 
         public Status Status { set; get; }
     }

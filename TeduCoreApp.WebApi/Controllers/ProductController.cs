@@ -18,15 +18,13 @@ namespace TeduCoreApp.WebApi.Controllers
     public class ProductController : ApiController
     {
         private IProductService _productService;
-        private IProductImageService _productImageService;
         private IHostingEnvironment _env;
         private readonly IAuthorizationService _authorizationService;
 
-        public ProductController(IProductService productService, IProductImageService productImageService, IHostingEnvironment env,
+        public ProductController(IProductService productService, IHostingEnvironment env,
             IAuthorizationService authorizationService)
         {
             _productService = productService;
-            _productImageService = productImageService;
             _env = env;
             _authorizationService = authorizationService;
         }
@@ -120,8 +118,6 @@ namespace TeduCoreApp.WebApi.Controllers
             Product productDb = _productService.GetProductDbById(productId);
             try
             {
-                ProductImageViewModel productImageVm = _productImageService.GetProductImageByProdutId(productId).FirstOrDefault();
-                productDb.ThumbnailImage = productImageVm.Path;
                 _productService.UpdateDb(productDb);
                 _productService.SaveChanges();
                 return new OkObjectResult(productId);
@@ -141,13 +137,8 @@ namespace TeduCoreApp.WebApi.Controllers
             {
                 return new BadRequestObjectResult(CommonConstants.Forbidden);
             }
-            List<ProductImageViewModel> listProductImageVm = _productImageService.GetProductImageByProdutId(id);
             _productService.Delete(id);
             _productService.SaveChanges();
-            for (int i = 0; i < listProductImageVm.Count(); i++)
-            {
-                listProductImageVm[i].Path.DeletementByString(_env);
-            }
             return Ok();
         }
 
@@ -163,13 +154,9 @@ namespace TeduCoreApp.WebApi.Controllers
             List<int> listProductId = Newtonsoft.Json.JsonConvert.DeserializeObject<List<int>>(checkedProducts);
             foreach (int item in listProductId)
             {
-                List<ProductImageViewModel> listProductImageVm = _productImageService.GetProductImageByProdutId(item);
+                
                 _productService.Delete(item);
                 _productService.SaveChanges();
-                for (int i = 0; i < listProductImageVm.Count(); i++)
-                {
-                    listProductImageVm[i].Path.DeletementByString(_env);
-                }
             }
             return Ok();
         }

@@ -22,34 +22,35 @@ namespace TeduCoreApp.Data.Entities
             Name = contactVm.Name;
             Phone = contactVm.Phone;
             Email = contactVm.Email;
-            Website = contactVm.Website;
             Address = contactVm.Address;
-            Other = contactVm.Other;
-            Lat = contactVm.Lat;
-            Lng = contactVm.Lng;
             Status = contactVm.Status;
+            Bank1 = contactVm.Bank1;
+            Bank2 = contactVm.Bank2;
+            Bank3 = contactVm.Bank3;
         }
         [StringLength(250)]
         [Required]
         public string Name { set; get; }
 
+        [Required]
         [StringLength(50)]
         public string Phone { set; get; }
 
         [StringLength(250)]
         public string Email { set; get; }
 
-        [StringLength(250)]
-        public string Website { set; get; }
-
+        [Required]
         [StringLength(250)]
         public string Address { set; get; }
 
-        public string Other { set; get; }
+        [StringLength(250)]
+        public string Bank1 { set; get; }
 
-        public double? Lat { set; get; }
+        [StringLength(250)]
+        public string Bank2 { set; get; }
 
-        public double? Lng { set; get; }
+        [StringLength(250)]
+        public string Bank3 { set; get; }
 
         public Status Status { set; get; }
     }

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using TeduCoreApp.Data.ViewModels.Product;
-using TeduCoreApp.Data.ViewModels.Tag;
 
 namespace TeduCoreApp.Models
 {
@@ -14,16 +10,5 @@ namespace TeduCoreApp.Models
         public List<ProductViewModel> ProductRelate { get; set; }
 
         public List<ProductViewModel> ProductUpsell { get; set; }
-
-        public List<TagViewModel> ProductTags { set; get; }
-
-        public List<ColorViewModel> Colors { get; set; }
-
-        public List<WholePriceViewModel> WholePrices { get; set; }
-
-        public string DomainApi { get; set; }
-
-        public List<ProductImageViewModel> ProductImages { get; set; }
-     
     }
 }

@@ -24,7 +24,7 @@ namespace TeduCoreApp.Data.ViewModels.Product
         [MaxLength(255)]
         public string Image { get; set; }
 
-        public bool? HomeFlag { get; set; }
+        public bool HomeFlag { get; set; }
 
         public DateTime DateCreated { set; get; }
         public DateTime DateModified { set; get; }
@@ -33,7 +33,7 @@ namespace TeduCoreApp.Data.ViewModels.Product
 
         [MaxLength(255)]
         public string SeoPageTitle { set; get; }
-
+        
         public string SeoAlias { set; get; }
 
         [MaxLength(255)]

@@ -10,60 +10,24 @@ namespace TeduCoreApp.Data.ViewModels.Product
     public class ProductViewModel
     {
         public int Id { get; set; }
-
-        [StringLength(50)]
-        [Required]
-        public string Name { get; set; }
-
-        [Required]
-        public int CategoryId { get; set; }
-
-        [Required]
-        [DefaultValue(0)]
-        public decimal Price { get; set; }
-
-        public decimal? PromotionPrice { get; set; }
-
-        [Required]
-        public decimal OriginalPrice { get; set; }
-
-        [StringLength(255)]
-        public string Description { get; set; }
-
-        public string Content { get; set; }
-
-        [MaxLength(500)]
-        public string ThumbnailImage { get; set; }
-
-        public bool? HomeFlag { get; set; }
-
-        public bool? HotFlag { get; set; }
-
-        public int? ViewCount { get; set; }
-
-        [StringLength(255)]
-        public string Tag { get; set; }
-
-        [StringLength(255)]
-        public string Unit { get; set; }
-
         public  ProductCategoryViewModel ProductCategory { set; get; }
+        public int CategoryId { get; set; }
+        public string Name { get; set; }
+        public string Price { get; set; }
+        public string Comment { get; set; }
 
-        public string SeoPageTitle { set; get; }
+        public string Model { get; set; }
 
-        [StringLength(255)]
-        public string SeoAlias { set; get; }
-
-        [StringLength(255)]
-        public string SeoKeywords { set; get; }
-
-        [StringLength(255)]
-        public string SeoDescription { set; get; }
+        public string MadeIn { get; set; }
 
         public DateTime DateCreated { set; get; }
+
         public DateTime DateModified { set; get; }
 
         public Status Status { set; get; }
+        public string ProductStatus { get; set; }
+
+
 
     }
 }

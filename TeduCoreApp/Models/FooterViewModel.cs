@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using TeduCoreApp.Data.ViewModels.Contact;
-using TeduCoreApp.Data.ViewModels.Pantner;
 using TeduCoreApp.Data.ViewModels.Product;
 
 namespace TeduCoreApp.Models
@@ -11,7 +10,6 @@ namespace TeduCoreApp.Models
 
         public ContactViewModel Contacts { set; get; }
 
-        public List<PantnerViewModel> Pantners { get; set; }
 
         public string DomainApi { get; set; }
     }

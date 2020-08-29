@@ -1,321 +1,403 @@
-﻿@{
-    ViewData["Title"] = (string)ViewBag.HomeTitle;
-    ViewData["MetaDescription"] = (string)ViewBag.HomeMetaDescription;
-    ViewData["MetaKeyword"] = (string)ViewBag.HomeMetaKeyword;
-}
-@model HomeViewModel
-@section Scripts{
-    <script src="~/client-side/js/Controllers/Home/Index.js"></script>
-    <script>
-        var homeObj = new HomeController();
-        homeObj.Initialize();
-        homeObj.HotDealTimer();
-    </script>
+﻿<!doctype html>
+<html lang="en">
 
-}
-<!-- JTV Home Slider -->
-<div class="jtv-slideshow">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-9 col-sm-12">
-                <div id='jtv-rev_slider_wrapper' class='rev_slider_wrapper fullwidthbanner-container'>
-                    <div id='jtv-rev_slider' class='rev_slider fullwidthabanner'>
-                        <ul>
-                            @foreach (var slile in Model.ListSlide)
-                            {
-                                <li data-transition='fade' data-slotamount='7' data-masterspeed='1000' data-thumb='@Model.DomainApi@slile.Image'>
-                                    <img class="img-responsive" src="@Model.DomainApi@slile.Image" alt="@slile.Name" data-bgposition='left top' data-bgfit='cover' data-bgrepeat='no-repeat' />
-                                    <div class="info">
-                                        <div class='tp-caption jtv-sub-title sft  tp-resizeme ' data-endspeed='500' data-speed='500' data-start='1100' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:2;max-width:auto;max-height:auto;white-space:nowrap; color:#393b7d;'><span>@slile.Description</span> </div>
-                                        <div class='tp-caption jtv-large-title sfl  tp-resizeme ' data-endspeed='500' data-speed='500' data-start='1300' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:3;max-width:auto;max-height:auto;white-space:nowrap;'><span style="color:#000;">@slile.Name</span> </div>
-                                        <div class='tp-caption Title sft  tp-resizeme ' data-endspeed='500' data-speed='500' data-start='1450' data-easing='Power2.easeInOut' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap; color:#666;'>@slile.Content</div>
-                                        <div class='tp-caption sfb  tp-resizeme ' data-endspeed='500' data-speed='500' data-start='1500' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap; font-size:18px;'><a href='@slile.Url' class="jtv-shop-now-btn">Shop Now</a> </div>
-                                    </div>
-                                </li>
-                            }
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- end JTV Home Slider -->
-            <div class="col-md-3 col-sm-12">
-                <div class="jtv-text-top-banner col-sm-6 col-md-12">
-                    @{
-                        var top1 = Model.ListAdvertistmentTop.Take(1).SingleOrDefault();
-                        var top2 = Model.ListAdvertistmentTop.Skip(1).Take(1).SingleOrDefault();
-                    }
-                    <a href="@top1.Url" title="">
-                        <img class="img-responsive" src="@Model.DomainApi@top1.Image" alt="@top1.Name"> <span class="jtv-b-content bottom-left">
-                            <span class="title">
-                                <span class="title-color">@top1.Name</span><br>
-                            </span> <span class="text">@top1.Description</span> <span class="btn-buy"><span>Buy now</span></span>
-                        </span>
-                    </a>
-                </div>
-                <div class="jtv-text-top-banner col-sm-6 col-md-12">
-                    <a href="@top2.Url" title="@top2.Name">
-                        <img class="img-responsive" src="@Model.DomainApi@top2.Image" alt="@top2.Name"> <span class="jtv-b-content top-center">
-                            <span class="title white-text">
-                                @top2.Name<br>
-                                @top2.Description
-                            </span>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- our features -->
-<div class="our-features-box hidden-xs">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-xs-12 col-sm-4">
-                <div class="feature-box first">
-                    <i class="pe-7s-piggy"></i>
-                    <div class="content">
-                        <h3>Giá cả hợp lý</h3>
-                        <p>Mua hàng với chi phí tiết kiệm nhất</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-xs-12 col-sm-4">
-                <div class="feature-box">
-                    <i class="pe-7s-timer"></i>
-                    <div class="content">
-                        <h3>Tiết kiệm thời gian</h3>
-                        <p>Mua hành nhanh chóng và tiện lợi</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-xs-12 col-sm-4">
-                <div class="feature-box">
-                    <i class="pe-7s-headphones"></i>
-                    <div class="content">
-                        <h3>Hỗ trợ trực tuyến</h3>
-                        <p>Cung cấp sản phẩm chất lượng</p>
+<head>
+
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--====== Title ======-->
+    <title>Smart - Multi-purpose Landing Page Template</title>
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!--====== Line Icons css ======-->
+    <link rel="stylesheet" href="assets/css/LineIcons.css">
+
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="assets/css/slick.css">
+
+    <!--====== Animate css ======-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="assets/css/default.css">
+
+
+
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--====== Clock css ======-->
+    <link rel="stylesheet" href="~/assets/css/clock.css">
+
+    <!--====== Clock css ======-->
+    <link rel="stylesheet" href="~/assets/css/table-responesite.css">
+
+
+</head>
+
+<body>
+
+    <!--====== PRELOADER PART START ======-->
+
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="content-page">
-    <div class="container">
-        <!-- Product Tabs-->
-        <div class="category-product">
-            <div class="navbar nav-menu">
-                <div class="navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a data-toggle="tab" href="#tab-1">Sản phẩm mới</a> </li>
-                        <li><a data-toggle="tab" href="#tab-2">Sản phẩm nổi bật</a> </li>
-                        <li><a data-toggle="tab" href="#tab-3">Sản phẩm khuyến mãi</a> </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <div class="tab-container">
-                <!-- tab product -->
-                <div class="tab-panel active" id="tab-1">
-                    <div class="category-products">
-                        <ul class="products-grid">
-                            @foreach (var newProduct in Model.ListNewProduct)
-                            {
-                                var urlNew = "/" + newProduct.SeoAlias + ".p-" + newProduct.Id + ".html";
-                                <li class="item col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                                    <div class="item-inner">
-                                        <div class="item-img">
-                                            <div class="item-img-info">
-                                                <a class="product-image" title="@newProduct.Name" href="@urlNew"> <img class="img-responsive" alt="@newProduct.Name" src="@Model.DomainApi@newProduct.ThumbnailImage"> </a>
-                                                <div class="new-label new-top-left">new</div>
-                                                <div class="action">  <a href="@urlNew" title="Chi tiết"><i class="fa fa-search"></i></a> <a class="btnWistlistAddItem" data-productid="@newProduct.Id" href="#" title="Yêu thích"><i class="fa fa-heart-o"></i></a>  </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-info">
-                                            <div class="info-inner">
-                                                <div class="item-title"> <a title="@newProduct.Name" href="@urlNew"> @newProduct.Name </a> </div>
-                                                <div class="item-content">
-                                                    <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
-                                                    <div class="item-price">
-                                                        <div class="price-box">
-                                                            @if (newProduct.PromotionPrice.HasValue)
-                                                            {
-                                                                <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> @newProduct.PromotionPrice@newProduct.Unit</span> </p>
-                                                                <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> @newProduct.Price@newProduct.Unit</span> </p>
 
-                                                            }
-                                                            else
-                                                            {
-                                                                <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> @newProduct.Price@newProduct.Unit</span> </p>
-                                                            }
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== NAVBAR PART START ======-->
 
-                            }
-                        </ul>
-                    </div>
-                </div>
-                <!-- tab product -->
-                <div class="tab-panel" id="tab-2">
-                    <div class="category-products">
-                        <ul class="products-grid">
-                            @foreach (var hotProduct in Model.ListHotProduct)
-                            {
-                                var urlHot = "/" + hotProduct.SeoAlias + ".p-" + hotProduct.Id + ".html";
-                                <li class="item col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                                    <div class="item-inner">
-                                        <div class="item-img">
-                                            <div class="item-img-info">
-                                                <a class="product-image" title="@hotProduct.Name" href="@urlHot"> <img class="img-responsive" alt="@hotProduct.Name" src="@Model.DomainApi@hotProduct.ThumbnailImage"> </a>
-                                                <div class="action">  <a href="@urlHot" title="Chi tiết"><i class="fa fa-search"></i></a> <a class="btnWistlistAddItem" data-productid="@hotProduct.Id" href="#" title="Yêu thích"><i class="fa fa-heart-o"></i></a>  </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-info">
-                                            <div class="info-inner">
-                                                <div class="item-title"> <a title="@hotProduct.Name" href="@urlHot"> @hotProduct.Name </a> </div>
-                                                <div class="item-content">
-                                                    <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
-                                                    <div class="item-price">
-                                                        <div class="price-box">
-                                                            @if (hotProduct.PromotionPrice.HasValue)
-                                                            {
-                                                                <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> @hotProduct.PromotionPrice@hotProduct.Unit </span> </p>
-                                                                <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> @hotProduct.Price@hotProduct.Unit</span> </p>
-                                                            }
-                                                            else
-                                                            {
-                                                                <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> @hotProduct.Price@hotProduct.Unit</span> </p>
-                                                            }
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+    <section class="header-area">
+        <div class="navbar-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="#">
+                                <img src="assets/images/logo.png" alt="Logo">
+                            </a>
 
-                            }
-                        </ul>
-                    </div>
-                </div>
-                <div class="tab-panel" id="tab-3">
-                    <div class="category-products">
-                        <ul class="products-grid">
-                            @foreach (var promotionProduct in Model.ListPromotionProduct)
-                            {
-                                var urlPromotion = "/" + promotionProduct.SeoAlias + ".p-" + promotionProduct.Id + ".html";
-                                <li class="item col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                                    <div class="item-inner">
-                                        <div class="item-img">
-                                            <div class="item-img-info">
-                                                <a class="product-image" title="@promotionProduct.Name" href="@urlPromotion"> <img class="img-responsive" alt="@promotionProduct.Name" src="@Model.DomainApi@promotionProduct.ThumbnailImage"> </a>
-                                                <div class="action">  <a href="@urlPromotion" title="Chi tiết"><i class="fa fa-search"></i></a> <a class="btnWistlistAddItem" data-productid="@promotionProduct" href="#" title="Yêu thích"><i class="fa fa-heart-o"></i></a> </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-info">
-                                            <div class="info-inner">
-                                                <div class="item-title"> <a title="@promotionProduct.Name" href="@urlPromotion"> @promotionProduct.Name </a> </div>
-                                                <div class="item-content">
-                                                    <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
-                                                    <div class="item-price">
-                                                        <div class="price-box">
-                                                            <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> @promotionProduct.PromotionPrice@promotionProduct.Unit</span> </p>
-                                                            <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> @promotionProduct.Price@promotionProduct.Unit</span> </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarEight" aria-controls="navbarEight" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
 
-                            }
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Latest Blog -->
-<div class="container">
-    <div class="row">
-
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="blog-outer-container">
-                <div class="jtv-title" style="text-align:center">
-                    <h2>Bài viết mới</h2>
-                </div>
-                <div class="blog-inner">
-                    @foreach (var blog in Model.ListBlog)
-                    {
-                        var urlBlog = "/" + blog.SeoAlias + ".b-" + blog.Id + ".html";
-                        <div class="col-md-4 col-sm-4">
-                            <div class="entry-thumb"> <a href="@urlBlog"> <img class="img-responsive" alt="@blog.Name" src="@Model.DomainApi@blog.Image"> </a> </div>
-                            <div class="blog-preview_info">
-                                <h3><a href="@urlBlog">@blog.Name</a></h3>
-                                <ul class="post-meta">
-                                    @if (blog.ViewCount > 0)
-                                    {
-                                        <li><i class="fa fa-comments"></i><a href="#">@blog.ViewCount</a> </li>
-                                    }
-                                    <li><i class="fa fa-calendar"></i>@blog.DateCreated</li>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarEight">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item active">
+                                        <a class="page-scroll" href="#home">HOME</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#about">ABOUT</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#portfolio">PORTFOLIO</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#pricing">PRICING</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#testimonial">CLIENTS</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#contact">CONTACT</a>
+                                    </li>
                                 </ul>
-                                <div class="blog-preview_desc">@blog.Description</div>
-                                <a class="blog-preview_btn" href="@urlBlog">Xem thêm  <i class="fa fa-long-arrow-right"></i></a>
+                            </div>
+
+                            <div class="navbar-btn d-none mt-15 d-lg-inline-block">
+                                <a class="menu-bar" href="#side-menu-right"><i class="lni-menu"></i></a>
+                            </div>
+                        </nav> <!-- navbar -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- navbar area -->
+
+        <div id="home" class="slider-area">
+            <div class="bd-example">
+                <div id="carouselOne" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselOne" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselOne" data-slide-to="1"></li>
+                        <li data-target="#carouselOne" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item bg_cover active" style="background-image: url(assets/images/slider-1.jpg)">
+                            <div class="carousel-caption">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-xl-6 col-lg-7 col-sm-10">
+                                            <h2 class="carousel-title">Refreshing Design & Easy to Customize</h2>
+                                            <ul class="carousel-btn rounded-buttons">
+                                                <li><a class="main-btn rounded-three" href="#">GET STARTED</a></li>
+                                                <li><a class="main-btn rounded-one" href="#">DOWNLOAD</a></li>
+                                            </ul>
+                                        </div>
+                                    </div> <!-- row -->
+                                </div> <!-- container -->
+                            </div> <!-- carousel caption -->
+                        </div> <!-- carousel-item -->
+
+                        <div class="carousel-item bg_cover" style="background-image: url(assets/images/slider-2.jpg)">
+                            <div class="carousel-caption">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-xl-6 col-lg-7 col-sm-10">
+                                            <h2 class="carousel-title">Based on Latest Bootstrap & HTML5</h2>
+                                            <ul class="carousel-btn rounded-buttons">
+                                                <li><a class="main-btn rounded-three" href="#">GET STARTED</a></li>
+                                                <li><a class="main-btn rounded-one" href="#">DOWNLOAD</a></li>
+                                            </ul>
+                                        </div>
+                                    </div> <!-- row -->
+                                </div> <!-- container -->
+                            </div> <!-- carousel caption -->
+                        </div> <!-- carousel-item -->
+
+                        <div class="carousel-item bg_cover" style="background-image: url(assets/images/slider-3.jpg)">
+                            <div class="carousel-caption">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-xl-6 col-lg-7 col-sm-10">
+                                            <h2 class="carousel-title">Multi-purpose Landing Page Template</h2>
+                                            <ul class="carousel-btn rounded-buttons">
+                                                <li><a class="main-btn rounded-three" href="#">GET STARTED</a></li>
+                                                <li><a class="main-btn rounded-one" href="#">DOWNLOAD</a></li>
+                                            </ul>
+                                        </div>
+                                    </div> <!-- row -->
+                                </div> <!-- container -->
+                            </div> <!-- carousel caption -->
+                        </div> <!-- carousel-item -->
+                    </div> <!-- carousel-inner -->
+
+                    <a class="carousel-control-prev" href="#carouselOne" role="button" data-slide="prev">
+                        <i class="lni-arrow-left-circle"></i>
+                    </a>
+
+                    <a class="carousel-control-next" href="#carouselOne" role="button" data-slide="next">
+                        <i class="lni-arrow-right-circle"></i>
+                    </a>
+                </div> <!-- carousel -->
+            </div> <!-- bd-example -->
+        </div>
+
+    </section>
+
+    <!--====== NAVBAR PART ENDS ======-->
+    <!--====== SAIDEBAR PART START ======-->
+
+    <div class="sidebar-right">
+        <div class="sidebar-close">
+            <a class="close" href="#close"><i class="lni-close"></i></a>
+        </div>
+        <div class="sidebar-content">
+            <div class="sidebar-logo text-center">
+                <a href="#"><img src="assets/images/logo-alt.png" alt="Logo"></a>
+            </div> <!-- logo -->
+            <div class="sidebar-menu">
+                <ul>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">RESOURCES</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div> <!-- menu -->
+            <div class="sidebar-social d-flex align-items-center justify-content-center">
+                <span>FOLLOW US</span>
+                <ul>
+                    <li><a href="#"><i class="lni-twitter-original"></i></a></li>
+                    <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
+                </ul>
+            </div> <!-- sidebar social -->
+        </div> <!-- content -->
+    </div>
+    <div class="overlay-right"></div>
+
+    <!--====== SAIDEBAR PART ENDS ======-->
+    <!--====== ABOUT PART START ======-->
+
+    <section id="about" class="about-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-8">
+                    <div class="about-image text-center wow fadeInUp" data-wow-duration="1.5s" data-wow-offset="100">
+
+                        <!--====== CLOCK ======-->
+                        <div id="clock" class="light">
+                            <div >
+                                <div class="weekdays"></div>
+                                <div class="ampm"></div>
+                                <div class="alarm"></div>
+                                <div class="digits"></div>
                             </div>
                         </div>
 
-                    }
+                    </div>
+                    <div class="section-title text-center mt-30 pb-40">
+                        <h4 class="title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.6s">LIÊN HỆ</h4>
+                        <p class="text wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">Địa chỉ</p>
+                        <p class="text wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">Số điện thoại</p>
+                        <p class="text wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">Tài khoản ngân hàng</p>
+                    </div> <!-- section title -->
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
 
-<!-- End Latest Blog -->
+    <!--====== ABOUT PART ENDS ======-->
+    <!--====== portfolio PART START ======-->
 
-<div class="container">
-    <div class="jtv-title" style="text-align:center; margin-bottom:20px">
-        <h2> </h2>
-    </div>
-    <div class="row">
-        @{int flag = 1;}
-        @foreach (var advertistmentBottom in Model.ListAdvertistmentBottom)
-        {
-            <div class="col-sm-4">
-                <div class="jtv-text-top-banner">
-                    <a href="@advertistmentBottom.Url" title="@advertistmentBottom.Name">
-                        <img class="img-responsive" src="@Model.DomainApi@advertistmentBottom.Image" alt="@advertistmentBottom.Name"> <span class="jtv-b-content top-left">
-                        </span> <span class="jtv-b-content bottom-left">
-                            <span class="banner-label-wrapper">
-                                <span class="title">
-                                    <span class="black-text">@advertistmentBottom.Name</span><br>
-                                </span>
-                                @if (flag == 2)
-                                {
-                                    <span class="title">
-                                        <small>@advertistmentBottom.Description</small>
-                                    </span>
-                                }
-                                else
-                                {
-                                    <span class="title"><small>@advertistmentBottom.Description</small></span><br>
-                                    <span class="btn-buy">Visit Now</span>
-                                }
-                            </span>
-                        </span>
-                    </a>
+    <section id="portfolio" class="portfolio-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="section-title text-center pb-20">
+                        <h3 class="title" style="color:aqua">Our Portfolio</h3>
+                    </div> <!-- row -->
                 </div>
-            </div>
-            flag += 1;
+                <div class="single-portfolio mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                    <div class="portfolio-image">
+                        <img src="assets/images/macbook-air-2020.jpg" alt="">
+                    </div>
+                </div> <!-- single portfolio -->
+            </div> <!-- row -->
 
-        }
-    </div>
-</div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="portfolio-menu pt-30 text-center">
+                        <ul>
+                            <li data-filter="*" class="active">ALL WORK</li>
+                        </ul>
+                    </div> <!-- portfolio menu -->
+                </div>
+            </div> <!-- row -->
+
+
+            <div class="row grid">
+                <div class="col-lg-12 col-sm-12">
+                    <div class="single-portfolio mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+
+                        <table class="responstable">
+
+                            <tr>
+                                <th>Main driver</th>
+                                <th data-th="Driver details"><span>First name</span></th>
+                                <th>Surname</th>
+                                <th>Date of birth</th>
+                                <th>Relationship</th>
+                            </tr>
+
+                            <tr>
+                                <td><input type="radio" /></td>
+                                <td>Steve</td>
+                                <td>Foo</td>
+                                <td>01/01/1978</td>
+                                <td>Policyholder</td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="radio" /></td>
+                                <td>Steffie</td>
+                                <td>Foo</td>
+                                <td>01/01/1978</td>
+                                <td>Spouse</td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="radio" /></td>
+                                <td>Stan</td>
+                                <td>Foo</td>
+                                <td>01/01/1994</td>
+                                <td>Son</td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="radio" /></td>
+                                <td>Stella</td>
+                                <td>Foo</td>
+                                <td>01/01/1992</td>
+                                <td>Daughter</td>
+                            </tr>
+
+                        </table>
+
+                    </div> <!-- single portfolio -->
+                </div> 
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+
+
+
+    <footer id="footer" class="footer-area">
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="copyright text-center mt-10">
+                            <p class="text">Copyright ©2020 All rights reserved|<strong style="color:red"> 621 Shop</strong></p>
+                        </div> <!--  copyright -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer copyright -->
+    </footer>
+
+    <!--====== FOOTER FOUR PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
+
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== PART START ======-->
+    <!--====== PART ENDS ======-->
+    <!--====== jquery js ======-->
+    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+
+    <!--====== Slick js ======-->
+    <script src="assets/js/slick.min.js"></script>
+
+    <!--====== Isotope js ======-->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+
+    <!--====== Images Loaded js ======-->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+
+    <!--====== Magnific Popup js ======-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+    <!--====== Scrolling js ======-->
+    <script src="assets/js/scrolling-nav.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+
+    <!--====== wow js ======-->
+    <script src="assets/js/wow.min.js"></script>
+
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+
+    <!--====== Clock js ======-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+    <script src="~/assets/js/clock.js"></script>
+    <!-- JavaScript Includes -->
+
+
+
+</body>
+
+</html>
