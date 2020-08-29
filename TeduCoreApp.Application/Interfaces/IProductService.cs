@@ -36,6 +36,8 @@ namespace TeduCoreApp.Application.Interfaces
 
         void SaveChanges();
 
-        
+        List<ProductViewModel> GetAllByCategory(int categoryId);
+
+
     }
 }

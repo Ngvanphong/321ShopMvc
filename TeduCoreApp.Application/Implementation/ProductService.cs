@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using TeduCoreApp.Application.Interfaces;
 using TeduCoreApp.Data.Entities;
+using TeduCoreApp.Data.Enums;
 using TeduCoreApp.Data.ViewModels.Product;
 using TeduCoreApp.Infrastructure.Interfaces;
 
@@ -165,6 +166,13 @@ namespace TeduCoreApp.Application.Implementation
         {
             return _mapper.Map<List<ProductViewModel>>(_productRepository.FindAll(x => x.Status == Data.Enums.Status.Active)
                 .OrderByDescending(x => x.DateCreated).Take(number).ToList());
+        }
+
+        public List<ProductViewModel> GetAllByCategory(int categoryId)
+        {
+            var listProduct = _productRepository.FindAll(x => x.CategoryId == categoryId && x.Status == Status.Active)
+                .OrderBy(x => x.Name);
+            return _mapper.Map<List<ProductViewModel>>(listProduct.ToList());
         }
     }
 }

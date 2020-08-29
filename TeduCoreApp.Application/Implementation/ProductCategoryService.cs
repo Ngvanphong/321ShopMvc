@@ -24,6 +24,12 @@ namespace TeduCoreApp.Application.Implementation
             _mapper = mapper;
         }
 
+        public List<ProductCategoryViewModel> GetAllParent()
+        {
+            var listParent = _productCategoryRepository.FindAll(x => x.Status == Status.Active&&x.ParentId==null).OrderBy(x => x.SortOrder);
+            return _mapper.Map<List<ProductCategoryViewModel>>(listParent.ToList());
+        }
+
         public ProductCategoryViewModel Add(ProductCategoryViewModel productCategoryVm)
         {
             ProductCategory productCategory = _mapper.Map<ProductCategory>(productCategoryVm);
@@ -65,7 +71,7 @@ namespace TeduCoreApp.Application.Implementation
         public List<ProductCategoryViewModel> GetAllByParentId(int parentId)
         {
             return _mapper.Map<List<ProductCategoryViewModel>>(_productCategoryRepository.FindAll(x => x.ParentId == parentId && x.Status == Status.Active)
-                .OrderBy(x => x.Name).ToList());
+                .OrderBy(x => x.SortOrder).ToList());
 
         }
 
@@ -124,5 +130,6 @@ namespace TeduCoreApp.Application.Implementation
         {
             throw new NotImplementedException();
         }
+
     }
 }

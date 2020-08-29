@@ -34,9 +34,12 @@ namespace TeduCoreApp.Application.Interfaces
 
         void SaveChanges();
 
-         List<ProductCategoryViewModel> GetAlllParentWithHomeFlag(bool HomeFag);
+        List<ProductCategoryViewModel> GetAlllParentWithHomeFlag(bool HomeFag);
+
+        List<ProductCategoryViewModel> GetAllParent();
 
         
+
 
     }
 }

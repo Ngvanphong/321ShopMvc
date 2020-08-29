@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 using TeduCoreApp.Application.Interfaces;
+using TeduCoreApp.Data.ViewModels.Product;
 using TeduCoreApp.Models;
 using static TeduCoreApp.Utilities.Constants.CommonConstants;
 
@@ -37,12 +39,33 @@ namespace TeduCoreApp.Controllers
             homeVm.ListCategoryNotHomeFlag = _productCategoryService.GetAlllParentWithHomeFlag(false);
             homeVm.Contact = _contactService.GetContact();
 
+            List<ProductHomeViewModel> listProductHomeVm = new List<ProductHomeViewModel>();
 
-            homeVm.DomainApi = _config["DomainApi:Domain"];
+            List<ProductCategoryViewModel> listParent = _productCategoryService.GetAllParent();
+            
+            foreach(ProductCategoryViewModel parent in listParent)
+            {
+                ProductHomeViewModel productHomeVm = new ProductHomeViewModel();
+                productHomeVm.CategoryParent = parent;
+                List<ProductCategoryViewModel> listCategoryHasProduct = _productCategoryService.GetAllByParentId(parent.Id);
+
+                List<ProductCategorySub> listProductSub = new List<ProductCategorySub>();
+                foreach(var category in listCategoryHasProduct)
+                {
+                    ProductCategorySub productSub = new ProductCategorySub();
+                    productSub.Category = category;
+                    productSub.ListProduct = _productService.GetAllByCategory(category.Id);
+                    listProductSub.Add(productSub);
+
+                }
+                productHomeVm.ListProductCategorySub = listProductSub;
+                listProductHomeVm.Add(productHomeVm);
+            }
+
+            homeVm.ListProductHome = listProductHomeVm;
             ViewBag.HomeTitle = _systemConfig.Detail("HomeTitle").Value1;
             ViewBag.HomeMetaDescription = _systemConfig.Detail("HomeMetaDescription").Value1;
             ViewBag.HomeMetaKeyword = _systemConfig.Detail("HomeMetaKeyword").Value1;
-
 
             return View(homeVm);
         }
