@@ -335,8 +335,6 @@ namespace TeduCoreApp.Data.EF.Migrations
 
                     b.Property<bool>("HomeFlag");
 
-                    b.Property<int?>("HomeOrder");
-
                     b.Property<string>("Image")
                         .HasMaxLength(255);
 

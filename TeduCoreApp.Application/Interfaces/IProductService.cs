@@ -30,16 +30,12 @@ namespace TeduCoreApp.Application.Interfaces
 
         Product GetProductDbById(int id);
 
-
-
-
-
-       
-
         List<ProductViewModel> GetAllByCategoryPaging(int categoryId, int page, int pageSize, string sort, out int totalRow);
 
         List<ProductViewModel> GetAllByNamePaging(string Name, int page, int pageSize, out int totalRow);
 
         void SaveChanges();
+
+        
     }
 }

@@ -22,7 +22,6 @@ namespace TeduCoreApp.WebApi.Extensions
             productCategory.SeoKeywords = productCategoryVm.SeoKeywords;
             productCategory.SeoDescription = productCategoryVm.SeoDescription;
             productCategory.Status = productCategoryVm.Status;
-            productCategory.HomeOrder = productCategoryVm.HomeOrder;
             productCategory.SeoPageTitle = productCategoryVm.SeoPageTitle;
         }
 

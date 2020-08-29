@@ -69,6 +69,13 @@ namespace TeduCoreApp.Application.Implementation
 
         }
 
+        public List<ProductCategoryViewModel> GetAlllParentWithHomeFlag(bool HomeFag)
+        {
+            var listParent = _productCategoryRepository.FindAll(x => x.ParentId == null && x.HomeFlag == HomeFag&&x.Status==Status.Active)
+                .OrderBy(x => x.SortOrder);
+            return _mapper.Map<List<ProductCategoryViewModel>>(listParent.ToList());
+        }
+
         public ProductCategoryViewModel GetById(int id)
         {
             return _mapper.Map<ProductCategoryViewModel>(_productCategoryRepository.FindById(id));
@@ -90,12 +97,6 @@ namespace TeduCoreApp.Application.Implementation
             }
             var listCategoryHasHref = all.Except(parent).OrderBy(x=>x.Name).Take(top);
             return _mapper.Map<List<ProductCategoryViewModel>>(listCategoryHasHref.ToList());
-        }
-
-        public List<ProductCategoryViewModel> GetHomeCategories(int top)
-        {
-            return _mapper.Map<List<ProductCategoryViewModel>>(_productCategoryRepository.FindAll(x => x.Status == Status.Active && x.HomeFlag == true, c => c.Products)
-                 .OrderByDescending(x => x.HomeOrder).Take(top).ToList());                
         }
 
         public void ReOrder(int sourceId, int targetId)

@@ -50,9 +50,9 @@ namespace TeduCoreApp.Application.Implementation
             return _mapper.Map<List<SlideViewModel>>(slides.ToList());
         }
 
-        public List<SlideViewModel> GetAll(bool ortherPageHome)
+        public List<SlideViewModel> GetAll()
         {
-            return _mapper.Map<List<SlideViewModel>>(_slideRepository.FindAll(x => x.OrtherPageHome == ortherPageHome && x.Status == true)
+            return _mapper.Map<List<SlideViewModel>>(_slideRepository.FindAll(x => x.Status == true)
                 .OrderBy(x => x.DisplayOrder).ToList());
         }
 

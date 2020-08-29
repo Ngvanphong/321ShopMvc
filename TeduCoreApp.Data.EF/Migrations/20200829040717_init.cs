@@ -133,13 +133,12 @@ namespace TeduCoreApp.Data.EF.Migrations
                 {
                     Id = table.Column<string>(maxLength: 255, nullable: false),
                     Name = table.Column<string>(maxLength: 250, nullable: false),
-                    Phone = table.Column<string>(maxLength: 50, nullable: true),
+                    Phone = table.Column<string>(maxLength: 50, nullable: false),
                     Email = table.Column<string>(maxLength: 250, nullable: true),
-                    Website = table.Column<string>(maxLength: 250, nullable: true),
-                    Address = table.Column<string>(maxLength: 250, nullable: true),
-                    Other = table.Column<string>(nullable: true),
-                    Lat = table.Column<double>(nullable: true),
-                    Lng = table.Column<double>(nullable: true),
+                    Address = table.Column<string>(maxLength: 250, nullable: false),
+                    Bank1 = table.Column<string>(maxLength: 250, nullable: true),
+                    Bank2 = table.Column<string>(maxLength: 250, nullable: true),
+                    Bank3 = table.Column<string>(maxLength: 250, nullable: true),
                     Status = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -185,7 +184,6 @@ namespace TeduCoreApp.Data.EF.Migrations
                     Name = table.Column<string>(maxLength: 50, nullable: false),
                     Description = table.Column<string>(maxLength: 255, nullable: true),
                     ParentId = table.Column<int>(nullable: true),
-                    HomeOrder = table.Column<int>(nullable: true),
                     Image = table.Column<string>(maxLength: 255, nullable: true),
                     HomeFlag = table.Column<bool>(nullable: false),
                     DateCreated = table.Column<DateTime>(nullable: false),

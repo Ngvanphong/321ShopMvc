@@ -10,7 +10,7 @@ namespace TeduCoreApp.Application.Interfaces
     {
         List<SlideViewModel> GetAllPagging(int page,int pageSize, string filter, out int totalRow);
 
-        List<SlideViewModel> GetAll(bool ortherPageHome);
+        List<SlideViewModel> GetAll();
 
         SlideViewModel GetById(int id);
 

@@ -10,7 +10,7 @@ using TeduCoreApp.Data.EF;
 namespace TeduCoreApp.Data.EF.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20200829000534_init")]
+    [Migration("20200829040717_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -180,28 +180,30 @@ namespace TeduCoreApp.Data.EF.Migrations
                         .HasMaxLength(255);
 
                     b.Property<string>("Address")
+                        .IsRequired()
+                        .HasMaxLength(250);
+
+                    b.Property<string>("Bank1")
+                        .HasMaxLength(250);
+
+                    b.Property<string>("Bank2")
+                        .HasMaxLength(250);
+
+                    b.Property<string>("Bank3")
                         .HasMaxLength(250);
 
                     b.Property<string>("Email")
                         .HasMaxLength(250);
 
-                    b.Property<double?>("Lat");
-
-                    b.Property<double?>("Lng");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(250);
 
-                    b.Property<string>("Other");
-
                     b.Property<string>("Phone")
+                        .IsRequired()
                         .HasMaxLength(50);
 
                     b.Property<int>("Status");
-
-                    b.Property<string>("Website")
-                        .HasMaxLength(250);
 
                     b.HasKey("Id");
 
@@ -334,8 +336,6 @@ namespace TeduCoreApp.Data.EF.Migrations
                         .HasMaxLength(255);
 
                     b.Property<bool>("HomeFlag");
-
-                    b.Property<int?>("HomeOrder");
 
                     b.Property<string>("Image")
                         .HasMaxLength(255);

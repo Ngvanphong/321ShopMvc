@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TeduCoreApp.Data.ViewModels.Contact;
 using TeduCoreApp.Data.ViewModels.Product;
 using TeduCoreApp.Data.ViewModels.Slide;
 
@@ -8,12 +9,12 @@ namespace TeduCoreApp.Models
     {
         public List<SlideViewModel> ListSlide { get; set; }
 
-        public List<ProductViewModel> ListNewProduct { get; set; }
-
-        public List<ProductViewModel> ListHotProduct { get; set; }
-
-        public List<ProductViewModel> ListPromotionProduct { get; set; }
-
         public string DomainApi { get; set; }
+
+        public List<ProductCategoryViewModel> ListCategoryHomeFlag { set; get; }
+
+        public List<ProductCategoryViewModel> ListCategoryNotHomeFlag { set; get; }
+
+        public ContactViewModel Contact { set; get; }
     }
 }

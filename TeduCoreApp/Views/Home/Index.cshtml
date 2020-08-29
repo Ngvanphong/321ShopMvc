@@ -1,4 +1,8 @@
-﻿<!doctype html>
+﻿@using TeduCoreApp.Data.ViewModels.Slide
+
+@model TeduCoreApp.Models.HomeViewModel
+
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -33,8 +37,6 @@
     <!--====== Default css ======-->
     <link rel="stylesheet" href="assets/css/default.css">
 
-
-
     <!--====== Style css ======-->
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -43,8 +45,6 @@
 
     <!--====== Clock css ======-->
     <link rel="stylesheet" href="~/assets/css/table-responesite.css">
-
-
 </head>
 
 <body>
@@ -93,20 +93,13 @@
                                         <a class="page-scroll" href="#home">HOME</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#about">ABOUT</a>
+                                        <a class="page-scroll" href="#about">LIÊN HỆ</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#portfolio">PORTFOLIO</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#pricing">PRICING</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#testimonial">CLIENTS</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#contact">CONTACT</a>
-                                    </li>
+                                    @{ foreach (ProductCategoryViewModel productCate in Model.ListCategoryHomeFlag)
+                                                    {
+                                        <li class="nav-item">
+                                            <a class="page-scroll" href="#@productCate.SeoAlias">@productCate.Name</a>
+                                        </li> } }
                                 </ul>
                             </div>
 
@@ -121,74 +114,51 @@
 
         <div id="home" class="slider-area">
             <div class="bd-example">
+
                 <div id="carouselOne" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselOne" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselOne" data-slide-to="1"></li>
-                        <li data-target="#carouselOne" data-slide-to="2"></li>
-                    </ol>
-
                     <div class="carousel-inner">
-                        <div class="carousel-item bg_cover active" style="background-image: url(assets/images/slider-1.jpg)">
-                            <div class="carousel-caption">
-                                <div class="container">
-                                    <div class="row justify-content-center">
-                                        <div class="col-xl-6 col-lg-7 col-sm-10">
-                                            <h2 class="carousel-title">Refreshing Design & Easy to Customize</h2>
-                                            <ul class="carousel-btn rounded-buttons">
-                                                <li><a class="main-btn rounded-three" href="#">GET STARTED</a></li>
-                                                <li><a class="main-btn rounded-one" href="#">DOWNLOAD</a></li>
-                                            </ul>
-                                        </div>
-                                    </div> <!-- row -->
-                                </div> <!-- container -->
-                            </div> <!-- carousel caption -->
-                        </div> <!-- carousel-item -->
+                        @{int firstSlide = 1; }
+                        @{ foreach (SlideViewModel slide in Model.ListSlide)
+                            {
+                                if (firstSlide == 1)
+                                {
+                <div class="carousel-item bg_cover active" } style="background-image: url(@slide.Image)">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-xl-6 col-lg-7 col-sm-10">
+                                    <h2 class="carousel-title">@slide.Content</h2>
+                                </div>
+                            </div> <!-- row -->
+                        </div> <!-- container -->
+                    </div> <!-- carousel caption -->
+                </div> <!-- carousel-item --> }
+                                else
+                                {
+                <div class="carousel-item bg_cover" } style="background-image: url(@slide.Image)">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-xl-6 col-lg-7 col-sm-10">
+                                    <h2 class="carousel-title">@slide.Content</h2>
+                                </div>
+                            </div> <!-- row -->
+                        </div> <!-- container -->
+                    </div> <!-- carousel caption -->
+                </div> <!-- carousel-item --> }
+                                firstSlide += 1;
 
-                        <div class="carousel-item bg_cover" style="background-image: url(assets/images/slider-2.jpg)">
-                            <div class="carousel-caption">
-                                <div class="container">
-                                    <div class="row justify-content-center">
-                                        <div class="col-xl-6 col-lg-7 col-sm-10">
-                                            <h2 class="carousel-title">Based on Latest Bootstrap & HTML5</h2>
-                                            <ul class="carousel-btn rounded-buttons">
-                                                <li><a class="main-btn rounded-three" href="#">GET STARTED</a></li>
-                                                <li><a class="main-btn rounded-one" href="#">DOWNLOAD</a></li>
-                                            </ul>
-                                        </div>
-                                    </div> <!-- row -->
-                                </div> <!-- container -->
-                            </div> <!-- carousel caption -->
-                        </div> <!-- carousel-item -->
-
-                        <div class="carousel-item bg_cover" style="background-image: url(assets/images/slider-3.jpg)">
-                            <div class="carousel-caption">
-                                <div class="container">
-                                    <div class="row justify-content-center">
-                                        <div class="col-xl-6 col-lg-7 col-sm-10">
-                                            <h2 class="carousel-title">Multi-purpose Landing Page Template</h2>
-                                            <ul class="carousel-btn rounded-buttons">
-                                                <li><a class="main-btn rounded-three" href="#">GET STARTED</a></li>
-                                                <li><a class="main-btn rounded-one" href="#">DOWNLOAD</a></li>
-                                            </ul>
-                                        </div>
-                                    </div> <!-- row -->
-                                </div> <!-- container -->
-                            </div> <!-- carousel caption -->
-                        </div> <!-- carousel-item -->
+                            } }
                     </div> <!-- carousel-inner -->
-
                     <a class="carousel-control-prev" href="#carouselOne" role="button" data-slide="prev">
                         <i class="lni-arrow-left-circle"></i>
                     </a>
-
                     <a class="carousel-control-next" href="#carouselOne" role="button" data-slide="next">
                         <i class="lni-arrow-right-circle"></i>
                     </a>
                 </div> <!-- carousel -->
             </div> <!-- bd-example -->
         </div>
-
     </section>
 
     <!--====== NAVBAR PART ENDS ======-->
@@ -204,21 +174,15 @@
             </div> <!-- logo -->
             <div class="sidebar-menu">
                 <ul>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">SERVICES</a></li>
-                    <li><a href="#">RESOURCES</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">LIÊN HỆ</a></li>
+                    @{ foreach (ProductCategoryViewModel cate2 in Model.ListCategoryNotHomeFlag)
+                        {
+            <li><a href="#@cate2.SeoAlias">@cate2.Name</a></li> } }
                 </ul>
             </div> <!-- menu -->
-            <div class="sidebar-social d-flex align-items-center justify-content-center">
-                <span>FOLLOW US</span>
-                <ul>
-                    <li><a href="#"><i class="lni-twitter-original"></i></a></li>
-                    <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
-                </ul>
-            </div> <!-- sidebar social -->
         </div> <!-- content -->
     </div>
+
     <div class="overlay-right"></div>
 
     <!--====== SAIDEBAR PART ENDS ======-->
@@ -232,20 +196,31 @@
 
                         <!--====== CLOCK ======-->
                         <div id="clock" class="light">
-                            <div >
+                            <div>
                                 <div class="weekdays"></div>
                                 <div class="ampm"></div>
                                 <div class="alarm"></div>
                                 <div class="digits"></div>
                             </div>
                         </div>
-
                     </div>
                     <div class="section-title text-center mt-30 pb-40">
                         <h4 class="title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.6s">LIÊN HỆ</h4>
+
                         <p class="text wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">Địa chỉ</p>
+                        <p class="text wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s" style="color:aqua">@Model.Contact.Address</p>
                         <p class="text wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">Số điện thoại</p>
+                        <p class="text wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s" style="color:aqua">@Model.Contact.Phone</p>
                         <p class="text wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">Tài khoản ngân hàng</p>
+                        @{ if (Model.Contact.Bank1 != null && Model.Contact.Bank1 != "")
+                            {
+                <p class="text wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s" style="color:aqua">@Model.Contact.Bank1</p> } }
+                        @{ if (Model.Contact.Bank2 != null && Model.Contact.Bank2 != "")
+                            {
+                <p class="text wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s" style="color:aqua">@Model.Contact.Bank2</p> } }
+                        @{ if (Model.Contact.Bank3 != null && Model.Contact.Bank3 != "")
+                            {
+                <p class="text wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s" style="color:aqua">@Model.Contact.Bank3</p> } }
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
@@ -270,7 +245,6 @@
                 </div> <!-- single portfolio -->
             </div> <!-- row -->
 
-
             <div class="row">
                 <div class="col-lg-12">
                     <div class="portfolio-menu pt-30 text-center">
@@ -281,7 +255,6 @@
                 </div>
             </div> <!-- row -->
 
-
             <div class="row grid">
                 <div class="col-lg-12 col-sm-12">
                     <div class="single-portfolio mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
@@ -289,15 +262,15 @@
                         <table class="responstable">
 
                             <tr>
-                                <th>Main driver</th>
-                                <th data-th="Driver details"><span>First name</span></th>
-                                <th>Surname</th>
-                                <th>Date of birth</th>
-                                <th>Relationship</th>
+                                <th>Tên Sản Phẩm</th>
+                                <th>Đơn Giá</th>
+                                <th>Tình Trạng</th>
+                                <th>Xuất Xứ</th>
+                                <th>Ghi Chú</th>
                             </tr>
 
                             <tr>
-                                <td><input type="radio" /></td>
+                                <td> iPad Mini 5 – 64gb WiFi GOLD Nguyên Seal</td>
                                 <td>Steve</td>
                                 <td>Foo</td>
                                 <td>01/01/1978</td>
@@ -305,7 +278,7 @@
                             </tr>
 
                             <tr>
-                                <td><input type="radio" /></td>
+                                <td>iPad Mini 5 – 64gb WiFi GOLD Nguyên Seal</td>
                                 <td>Steffie</td>
                                 <td>Foo</td>
                                 <td>01/01/1978</td>
@@ -313,7 +286,7 @@
                             </tr>
 
                             <tr>
-                                <td><input type="radio" /></td>
+                                <td>iPad Mini 5 – 64gb WiFi GOLD Nguyên Seal</td>
                                 <td>Stan</td>
                                 <td>Foo</td>
                                 <td>01/01/1994</td>
@@ -321,23 +294,18 @@
                             </tr>
 
                             <tr>
-                                <td><input type="radio" /></td>
+                                <td>iPad Mini 5 – 64gb WiFi GOLD Nguyên Seal</td>
                                 <td>Stella</td>
                                 <td>Foo</td>
                                 <td>01/01/1992</td>
                                 <td>Daughter</td>
                             </tr>
-
                         </table>
-
                     </div> <!-- single portfolio -->
-                </div> 
+                </div>
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
-
-
-
 
     <footer id="footer" class="footer-area">
         <div class="footer-copyright">
@@ -345,7 +313,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-12">
                         <div class="copyright text-center mt-10">
-                            <p class="text">Copyright ©2020 All rights reserved|<strong style="color:red"> 621 Shop</strong></p>
+                            <p class="text">Copyright ©2020 All rights reserved |<strong style="color:red"> 621 Shop</strong></p>
                         </div> <!--  copyright -->
                     </div>
                 </div> <!-- row -->
@@ -395,9 +363,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
     <script src="~/assets/js/clock.js"></script>
     <!-- JavaScript Includes -->
-
-
-
 </body>
-
 </html>

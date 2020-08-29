@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using TeduCoreApp.Application.Interfaces;
 using TeduCoreApp.Data.Entities;
@@ -33,7 +34,7 @@ namespace TeduCoreApp.Application.Implementation
 
         public ContactViewModel GetContact()
         {
-            return _mapper.Map<ContactViewModel>(_contactRepository.FindSingle(x => x.Id == "Default"));
+            return _mapper.Map<ContactViewModel>(_contactRepository.FindAll().FirstOrDefault());
         }
 
         public void SaveChanges()

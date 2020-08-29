@@ -19,8 +19,6 @@ namespace TeduCoreApp.Data.ViewModels.Product
 
         public int? ParentId { get; set; }
 
-        public int? HomeOrder { get; set; }
-
         [MaxLength(255)]
         public string Image { get; set; }
 

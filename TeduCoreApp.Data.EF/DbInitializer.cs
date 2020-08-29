@@ -79,11 +79,19 @@ namespace TeduCoreApp.Data.EF
             {
                 List<Slide> slides = new List<Slide>()
                 {
-                    new Slide() {Name="Slide 1",Image="/client-side/images/slider/slide-1.jpg",Url="#",DisplayOrder = 0,OrtherPageHome = false,Status = true },
-                    new Slide() {Name="Slide 2",Image="/client-side/images/slider/slide-2.jpg",Url="#",DisplayOrder = 1,OrtherPageHome = false,Status = true },
-                    new Slide() {Name="Slide 3",Image="/client-side/images/slider/slide-3.jpg",Url="#",DisplayOrder = 2,OrtherPageHome = false,Status = true },
+                    new Slide() {Name="Slide 1",Image="/assets/images/slider-1.jpg",Url="#",DisplayOrder = 0,OrtherPageHome = false,Status = true },
+                    new Slide() {Name="Slide 2",Image="/assets/images/slider-2.jpg",Url="#",DisplayOrder = 1,OrtherPageHome = false,Status = true },
+                    new Slide() {Name="Slide 3",Image="/assets/images/slider-3.jpg",Url="#",DisplayOrder = 2,OrtherPageHome = false,Status = true },
                 };
                 _context.Slides.AddRange(slides);
+                _context.SaveChanges();
+            }
+
+            if (_context.Contacts.Count() == 0)
+            {
+
+                var contact = new Contact() {Name="Default",Address = "Ho Chi Minh View Nam", Phone = "01223333" };
+                _context.Contacts.Add(contact);
                 _context.SaveChanges();
             }
 

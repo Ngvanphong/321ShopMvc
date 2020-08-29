@@ -5,7 +5,7 @@ using TeduCoreApp.Data.ViewModels.Product;
 
 namespace TeduCoreApp.Application.Interfaces
 {
-    public interface IProductCategoryService: IDisposable
+    public interface IProductCategoryService : IDisposable
     {
         ProductCategoryViewModel Add(ProductCategoryViewModel productCategoryVm);
 
@@ -29,10 +29,14 @@ namespace TeduCoreApp.Application.Interfaces
 
         void ReOrder(int sourceId, int targetId);
 
-        List<ProductCategoryViewModel> GetHomeCategories(int top);
 
         List<ProductCategoryViewModel> GetCategoryFooter(int top);
 
         void SaveChanges();
+
+         List<ProductCategoryViewModel> GetAlllParentWithHomeFlag(bool HomeFag);
+
+        
+
     }
 }
