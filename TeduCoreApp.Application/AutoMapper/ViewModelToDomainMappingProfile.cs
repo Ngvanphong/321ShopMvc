@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 
 using TeduCoreApp.Data.Entities;
+using TeduCoreApp.Data.ViewModels;
 using TeduCoreApp.Data.ViewModels.Contact;
 using TeduCoreApp.Data.ViewModels.FunctionVm;
 using TeduCoreApp.Data.ViewModels.Identity;
@@ -33,6 +34,10 @@ namespace TeduCoreApp.Application.AutoMapper
            .ConstructUsing(c => new Contact(c));
             CreateMap<SystemConfigViewModel, SystemConfig>()
          .ConstructUsing(c => new SystemConfig(c));
+            CreateMap<PageViewModel, Page>()
+        .ConstructUsing(c => new Page(c));
+            CreateMap<PageImageViewModel, PageImage>()
+        .ConstructUsing(c => new PageImage(c));
         }
     }
 }

@@ -42,11 +42,15 @@ namespace TeduCoreApp.Data.EF
 
 
         public DbSet<Permission> Permissions { get; set; }
-  
 
-   
+        public DbSet<Page> Pages { get; set; }
 
-       
+        public DbSet<PageImage> PageImages { get; set; }
+
+
+
+
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

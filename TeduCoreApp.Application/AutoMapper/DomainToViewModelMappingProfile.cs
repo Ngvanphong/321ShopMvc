@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using TeduCoreApp.Data.Entities;
-
+using TeduCoreApp.Data.ViewModels;
 using TeduCoreApp.Data.ViewModels.Contact;
 using TeduCoreApp.Data.ViewModels.FunctionVm;
 using TeduCoreApp.Data.ViewModels.Identity;
@@ -25,6 +25,8 @@ namespace TeduCoreApp.Application.AutoMapper
             CreateMap<Slide, SlideViewModel>();
             CreateMap<Contact, ContactViewModel>();
             CreateMap<SystemConfig, SystemConfigViewModel>();
+            CreateMap<Page, PageViewModel>();
+            CreateMap<PageImage, PageImageViewModel>();
         }
     }
 }

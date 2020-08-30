@@ -92,6 +92,8 @@ namespace TeduCoreApp
             services.AddTransient<IRepository<Slide, int>, EFRepository<Slide, int>>();
             services.AddTransient<IRepository<Data.Entities.Contact, string>, EFRepository<Data.Entities.Contact, string>>();
             services.AddTransient<IRepository<SystemConfig, string>, EFRepository<SystemConfig, string>>();
+            services.AddTransient<IRepository<Page, int>, EFRepository<Page, int>>();
+            services.AddTransient<IRepository<PageImage, int>, EFRepository<PageImage, int>>();
 
             // Service
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
@@ -102,6 +104,8 @@ namespace TeduCoreApp
             services.AddTransient<ISlideService, SlideService>();
             services.AddTransient<IContactService, ContactService>();
             services.AddTransient<ISystemConfigService, SystemConfigService>();
+            services.AddTransient<IPageService, PageService>();
+            services.AddTransient<IPageImageService, PageImageService>();
 
             services.AddMvc().AddJsonOptions(option => option.SerializerSettings.ContractResolver = new DefaultContractResolver());
             services.AddRecaptcha(new RecaptchaOptions

@@ -71,6 +71,7 @@ namespace TeduCoreApp.Data.EF
 
                     new Function() {Id = "UTILITY",Name = "Tiện ích",ParentId = null,SortOrder = 4,Status = Status.Active,URL = "/",IconCss = "fa-clone"  },
                     new Function() {Id = "SLIDE",Name = "Slide",ParentId = "UTILITY",SortOrder = 2,Status = Status.Active,URL = "/main/slide/index",IconCss = "fa-clone"  },
+                    new Function() {Id = "PAGE",Name = "Trang lẻ",ParentId = "UTILITY",SortOrder = 3,Status = Status.Active,URL = "/main/page/index",IconCss = "fa-clone"  },
                 });
                 _context.SaveChanges();
             }

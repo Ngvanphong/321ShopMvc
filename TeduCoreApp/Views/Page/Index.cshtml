@@ -1,0 +1,22 @@
+﻿@model TeduCoreApp.Data.ViewModels.PageViewModel
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .container {
+            background: #fff;
+            min-height: 800px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container"> 
+        @Html.Raw(Model.Content)    
+    </div>
+</body>
+</html>
