@@ -43,7 +43,7 @@ namespace TeduCoreApp.WebApi.Controllers
 
         [HttpGet]
         [Route("getall")]
-        public async Task<IActionResult> GetAll(string keyword, int? categoryId, string filterHotPromotion, int pageSize = 10, int page = 1)
+        public async Task<IActionResult> GetAll(string keyword, int? categoryId, int pageSize = 10, int page = 1)
         {
             var hasPermission = await _authorizationService.AuthorizeAsync(User, "PRODUCT", Operations.Read);
             if (hasPermission.Succeeded == false)
@@ -51,7 +51,7 @@ namespace TeduCoreApp.WebApi.Controllers
                 return new BadRequestObjectResult(CommonConstants.Forbidden);
             }
             int totalRow = 0;
-            List<ProductViewModel> listProduct = _productService.GetAll(categoryId, filterHotPromotion, keyword, page, pageSize, out totalRow);
+            List<ProductViewModel> listProduct = _productService.GetAll(categoryId, keyword, page, pageSize, out totalRow);
             return new OkObjectResult(new ApiResultPaging<ProductViewModel>()
             {
                 Items = listProduct,

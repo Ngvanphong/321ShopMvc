@@ -63,6 +63,7 @@ namespace TeduCoreApp.Controllers
             }
 
             homeVm.ListProductHome = listProductHomeVm;
+            homeVm.DomainApi= _config["DomainApi:Domain"];
             ViewBag.HomeTitle = _systemConfig.Detail("HomeTitle").Value1;
             ViewBag.HomeMetaDescription = _systemConfig.Detail("HomeMetaDescription").Value1;
             ViewBag.HomeMetaKeyword = _systemConfig.Detail("HomeMetaKeyword").Value1;

@@ -67,7 +67,7 @@ namespace TeduCoreApp.Application.Implementation
             return _mapper.Map<List<ProductViewModel>>(_productRepository.FindAll().OrderByDescending(x => x.DateCreated).ToList());
         }
 
-        public List<ProductViewModel> GetAll(int? categoryId, string hotPromotion, string keyword, int page, int pageSize, out int totalRow)
+        public List<ProductViewModel> GetAll(int? categoryId, string keyword, int page, int pageSize, out int totalRow)
         {
             var listProduct = _productRepository.FindAll(c => c.ProductCategory);
             if (categoryId.HasValue)

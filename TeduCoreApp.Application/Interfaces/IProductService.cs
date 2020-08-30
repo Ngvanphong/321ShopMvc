@@ -22,7 +22,7 @@ namespace TeduCoreApp.Application.Interfaces
 
         List<ProductViewModel> GetNewProduct(int number);
 
-        List<ProductViewModel> GetAll(int? categoryId, string hotPromotion, string keyword, int page, int pageSize, out int totalRow);
+        List<ProductViewModel> GetAll(int? categoryId, string keyword, int page, int pageSize, out int totalRow);
 
         List<ProductViewModel> GetAllPaging(int page, int pageSize, out int totalRow);
 

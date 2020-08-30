@@ -10,12 +10,12 @@
     <!--====== Required meta tags ======-->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="@ViewData["MetaDescription"]">
-    <meta name="keywords" content="@ViewData["MetaKeyword"]" />
+    <meta name="description" content="@ViewBag.HomeMetaDescription">
+    <meta name="keywords" content="@ViewBag.HomeMetaKeyword" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--====== Title ======-->
-    <title>@ViewData["Title"]</title>
+    <title>@ViewBag.HomeTitle</title>
 
 
     <!--====== Favicon Icon ======-->
@@ -124,7 +124,7 @@
                             {
                                 if (firstSlide == 1)
                                 {
-                <div class="carousel-item bg_cover active" } style="background-image: url(@slide.Image)">
+                <div class="carousel-item bg_cover active" } style="background-image: url(@Model.DomainApi@slide.Image)">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -137,17 +137,17 @@
                 </div> <!-- carousel-item --> }
             else
             {
-<div class="carousel-item bg_cover" } style="background-image: url(@slide.Image)">
-    <div class="carousel-caption">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-6 col-lg-7 col-sm-10">
-                    <h2 class="carousel-title">@slide.Content</h2>
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </div> <!-- carousel caption -->
-</div> <!-- carousel-item --> }
+                    <div class="carousel-item bg_cover" } style="background-image: url(@Model.DomainApi@slide.Image)">
+                        <div class="carousel-caption">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-xl-6 col-lg-7 col-sm-10">
+                                        <h2 class="carousel-title">@slide.Content</h2>
+                                    </div>
+                                </div> <!-- row -->
+                            </div> <!-- container -->
+                        </div> <!-- carousel caption -->
+                    </div> <!-- carousel-item --> }
 firstSlide += 1;
 
 } }
@@ -245,7 +245,7 @@ firstSlide += 1;
         </div>
         <div class="single-portfolio mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
             <div class="portfolio-image">
-                <img src="@productHome.CategoryParent.Image" alt="">
+                <img src="@Model.DomainApi@productHome.CategoryParent.Image" alt="">
             </div>
         </div> <!-- single portfolio -->
     </div> <!-- row -->
@@ -255,7 +255,7 @@ firstSlide += 1;
     <div class="col-lg-12">
         <div class="portfolio-menu pt-30 text-center">
             <ul>
-                <li data-filter="*" class="active">@productSub.Category.Name</li>
+                <li style="font-size:32px" data-filter="*" class="active">@productSub.Category.Name</li>
             </ul>
         </div> <!-- portfolio menu -->
     </div>
@@ -348,6 +348,9 @@ firstSlide += 1;
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
     <script src="~/assets/js/clock.js"></script>
     <!-- JavaScript Includes -->
+
+
+
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();

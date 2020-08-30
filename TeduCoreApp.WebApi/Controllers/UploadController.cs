@@ -46,7 +46,11 @@ namespace TeduCoreApp.WebApi.Controllers
                         else
                         {
                             string directory = string.Empty;
-                            if (type == "avatar")
+                            if (type == "productcategory")
+                            {
+                                directory = @"/UploadedFiles/Category/";
+                            }
+                            else if (type == "avatar")
                             {
                                 directory = @"/UploadedFiles/Avatars/";
                             }

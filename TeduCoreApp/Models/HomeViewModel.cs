@@ -19,5 +19,7 @@ namespace TeduCoreApp.Models
         public ContactViewModel Contact { set; get; }
 
         public List<ProductHomeViewModel> ListProductHome { set; get; }
+
+        
     }
 }
