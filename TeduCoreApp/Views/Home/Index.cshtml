@@ -47,6 +47,12 @@
 
     <!--====== Clock css ======-->
     <link rel="stylesheet" href="~/assets/css/table-responesite.css">
+    <style>
+        .zalo-chat-widget {
+            bottom: 90px !important;
+            left: 20px !important;
+        }  
+    </style>
 </head>
 
 <body>
@@ -82,6 +88,7 @@
                             <a class="navbar-brand" href="#">
                                 <img src="assets/images/logo.png" alt="Logo">
                             </a>
+                            <a class="nav-item" style="color:black; font-weight:bold" href="/page.html?=bao-hanh" target="_blank">BẢO HÀNH</a>
 
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarEight" aria-controls="navbarEight" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="toggler-icon"></span>
@@ -92,9 +99,6 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarEight">
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item active">
-                                        <a class="page-scroll" href="/page.html?=bao-hanh" target="_blank">BẢO HÀNH</a>
-                                    </li>
-                                    <li class="nav-item">
                                         <a class="page-scroll" href="#about">LIÊN HỆ</a>
                                     </li>
                                     @{ foreach (ProductCategoryViewModel productCate in Model.ListCategoryHomeFlag)
@@ -102,6 +106,7 @@
                             <li class="nav-item">
                                 <a class="page-scroll" href="#@productCate.SeoAlias">@productCate.Name</a>
                             </li> } }
+
                                 </ul>
                             </div>
 
@@ -137,17 +142,17 @@
                 </div> <!-- carousel-item --> }
             else
             {
-                    <div class="carousel-item bg_cover" } style="background-image: url(@Model.DomainApi@slide.Image)">
-                        <div class="carousel-caption">
-                            <div class="container">
-                                <div class="row justify-content-center">
-                                    <div class="col-xl-6 col-lg-7 col-sm-10">
-                                        <h2 class="carousel-title">@slide.Content</h2>
-                                    </div>
-                                </div> <!-- row -->
-                            </div> <!-- container -->
-                        </div> <!-- carousel caption -->
-                    </div> <!-- carousel-item --> }
+<div class="carousel-item bg_cover" } style="background-image: url(@Model.DomainApi@slide.Image)">
+    <div class="carousel-caption">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-7 col-sm-10">
+                    <h2 class="carousel-title">@slide.Content</h2>
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div> <!-- carousel caption -->
+</div> <!-- carousel-item --> }
 firstSlide += 1;
 
 } }
@@ -179,7 +184,8 @@ firstSlide += 1;
                     <li><a href="#">LIÊN HỆ</a></li>
                     @{ foreach (ProductCategoryViewModel cate2 in Model.ListCategoryNotHomeFlag)
                         {
-            <li><a href="#@cate2.SeoAlias">@cate2.Name</a></li> } }
+            <li><a href="#@cate2.SeoAlias">@cate2.Name</a></li>
+ } }
                 </ul>
             </div> <!-- menu -->
         </div> <!-- content -->
@@ -282,8 +288,7 @@ firstSlide += 1;
                         <td>@product.ProductStatus</td>
                         <td>@product.MadeIn</td>
                         <td>@product.Comment</td>
-                    </tr>
- } }
+                    </tr> } }
 
                                 </table>
                             </div> <!-- single portfolio -->
@@ -351,19 +356,9 @@ firstSlide += 1;
 
 
 
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function () {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/5c5a2e4d7cf662208c94390a/default';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
-    <!--End of Tawk.to Script-->
+    <div  class="zalo-chat-widget" data-oaid="579745863508352884" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="350" data-height="420"></div>
+
+    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
 
 
 </body>
