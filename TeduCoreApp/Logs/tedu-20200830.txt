@@ -3938,3 +3938,1028 @@ WHERE [x].[Id] = @__id_0" (0723d8ff)
 2020-08-30T09:51:58.7052173+09:00 0HM2CFRHN0LAR:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/fonts/LineIcons.ttf?y2l643   (ca22a1cb)
 2020-08-30T09:51:58.7114480+09:00 0HM2CFRHN0LAR:00000002 [INF] Sending file. Request path: '"/assets/fonts/LineIcons.ttf"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\fonts\LineIcons.ttf"' (27b0a520)
 2020-08-30T09:51:58.7186147+09:00 0HM2CFRHN0LAR:00000002 [INF] Request finished in 19.6445ms 200 application/x-font-ttf (791a596a)
+2020-08-30T09:57:08.6500000+09:00  [WRN] No type was specified for the decimal column '"Balance"' on entity type '"AppUser"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-08-30T09:57:08.6587807+09:00  [WRN] No type was specified for the decimal column '"Value5"' on entity type '"SystemConfig"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-08-30T09:57:08.7305625+09:00  [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2020-08-30T09:57:09.0947258+09:00  [INF] Executed DbCommand ("23"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T09:57:09.1360846+09:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T09:57:09.1517866+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2020-08-30T09:57:09.1578911+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Slides] AS [s]" (0723d8ff)
+2020-08-30T09:57:09.1621201+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ContactDetails] AS [c]" (0723d8ff)
+2020-08-30T09:57:09.1661076+09:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2020-08-30T09:57:09.2138837+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T09:57:09.2186853+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T09:57:09.2231851+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T09:57:09.6313520+09:00 0HM2CFUFPD98V:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50638/  0 (ca22a1cb)
+2020-08-30T09:57:09.6323291+09:00 0HM2CFUFPD98U:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2020-08-30T09:57:09.6894557+09:00 0HM2CFUFPD98V:00000001 [INF] Request finished in 87.6757ms 200  (791a596a)
+2020-08-30T09:57:09.9589356+09:00 0HM2CFUFPD98U:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-08-30T09:57:09.9713063+09:00 0HM2CFUFPD98U:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2020-08-30T09:57:10.0201574+09:00 0HM2CFUFPD98U:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Content], [x].[Description], [x].[DisplayOrder], [x].[Image], [x].[Name], [x].[OrtherPageHome], [x].[Status], [x].[Url]
+FROM [Slides] AS [x]
+WHERE [x].[Status] = 1
+ORDER BY [x].[DisplayOrder]" (0723d8ff)
+2020-08-30T09:57:10.1438962+09:00 0HM2CFUFPD98U:00000001 [INF] Executed DbCommand ("29"ms) [Parameters=["@__HomeFag_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] IS NULL AND ([x].[HomeFlag] = @__HomeFag_0)) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T09:57:10.1802586+09:00 0HM2CFUFPD98U:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__HomeFag_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] IS NULL AND ([x].[HomeFlag] = @__HomeFag_0)) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T09:57:10.1926730+09:00 0HM2CFUFPD98U:00000001 [WRN] Query: '"(from Contact <generated>_1 in DbSet<Contact> select [<generated>_1]).FirstOrDefault()"' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results. (6af4db4b)
+2020-08-30T09:57:10.2043608+09:00 0HM2CFUFPD98U:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[Address], [c].[Bank1], [c].[Bank2], [c].[Bank3], [c].[Email], [c].[Name], [c].[Phone], [c].[Status]
+FROM [ContactDetails] AS [c]" (0723d8ff)
+2020-08-30T09:57:10.2282553+09:00 0HM2CFUFPD98U:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[Status] = 1) AND [x].[ParentId] IS NULL
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T09:57:10.2363930+09:00 0HM2CFUFPD98U:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__parentId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] = @__parentId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T09:57:10.2460300+09:00 0HM2CFUFPD98U:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__categoryId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[CategoryId], [x].[Comment], [x].[DateCreated], [x].[DateModified], [x].[MadeIn], [x].[Model], [x].[Name], [x].[Price], [x].[ProductStatus], [x].[Status]
+FROM [Products] AS [x]
+WHERE ([x].[CategoryId] = @__categoryId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[Name]" (0723d8ff)
+2020-08-30T09:57:10.2800421+09:00 0HM2CFUFPD98U:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__parentId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] = @__parentId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T09:57:10.2824457+09:00 0HM2CFUFPD98U:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__parentId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] = @__parentId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T09:57:10.2848191+09:00 0HM2CFUFPD98U:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__parentId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] = @__parentId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T09:57:10.3411859+09:00 0HM2CFUFPD98U:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [x].[Id], [x].[Name], [x].[Status], [x].[Value1], [x].[Value2], [x].[Value3], [x].[Value4], [x].[Value5]
+FROM [SystemConfigs] AS [x]
+WHERE [x].[Id] = @__id_0" (0723d8ff)
+2020-08-30T09:57:10.3686025+09:00 0HM2CFUFPD98U:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [x].[Id], [x].[Name], [x].[Status], [x].[Value1], [x].[Value2], [x].[Value3], [x].[Value4], [x].[Value5]
+FROM [SystemConfigs] AS [x]
+WHERE [x].[Id] = @__id_0" (0723d8ff)
+2020-08-30T09:57:10.3725802+09:00 0HM2CFUFPD98U:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [x].[Id], [x].[Name], [x].[Status], [x].[Value1], [x].[Value2], [x].[Value3], [x].[Value4], [x].[Value5]
+FROM [SystemConfigs] AS [x]
+WHERE [x].[Id] = @__id_0" (0723d8ff)
+2020-08-30T09:57:13.7652193+09:00 0HM2CFUFPD98U:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2020-08-30T09:57:13.9301499+09:00 0HM2CFUFPD98U:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 4001.464ms (afa2e885)
+2020-08-30T09:57:13.9738387+09:00 0HM2CFUFPD98V:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/bootstrap.min.css   (ca22a1cb)
+2020-08-30T09:57:13.9750047+09:00 0HM2CFUFPD990:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/LineIcons.css   (ca22a1cb)
+2020-08-30T09:57:13.9776844+09:00 0HM2CFUFPD993:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/magnific-popup.css   (ca22a1cb)
+2020-08-30T09:57:13.9906495+09:00 0HM2CFUFPD996:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/table-responesite.css   (ca22a1cb)
+2020-08-30T09:57:13.9921025+09:00 0HM2CFUFPD98U:00000001 [INF] Request finished in 4390.0523ms 200 text/html; charset=utf-8 (791a596a)
+2020-08-30T09:57:13.9937310+09:00 0HM2CFUFPD991:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/slick.css   (ca22a1cb)
+2020-08-30T09:57:13.9969139+09:00 0HM2CFUFPD997:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/clock.css   (ca22a1cb)
+2020-08-30T09:57:14.0068041+09:00 0HM2CFUFPD992:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/animate.css   (ca22a1cb)
+2020-08-30T09:57:14.0082752+09:00 0HM2CFUFPD999:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/vendor/modernizr-3.6.0.min.js   (ca22a1cb)
+2020-08-30T09:57:14.0089490+09:00 0HM2CFUFPD995:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/style.css   (ca22a1cb)
+2020-08-30T09:57:14.0233070+09:00 0HM2CFUFPD993:00000001 [INF] Sending file. Request path: '"/assets/css/magnific-popup.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\magnific-popup.css"' (27b0a520)
+2020-08-30T09:57:14.0233650+09:00 0HM2CFUFPD98V:00000002 [INF] Sending file. Request path: '"/assets/css/bootstrap.min.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\bootstrap.min.css"' (27b0a520)
+2020-08-30T09:57:14.0245958+09:00 0HM2CFUFPD990:00000001 [INF] Sending file. Request path: '"/assets/css/LineIcons.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\LineIcons.css"' (27b0a520)
+2020-08-30T09:57:14.0322529+09:00 0HM2CFUFPD999:00000001 [INF] Sending file. Request path: '"/assets/js/vendor/modernizr-3.6.0.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\vendor\modernizr-3.6.0.min.js"' (27b0a520)
+2020-08-30T09:57:14.0336662+09:00 0HM2CFUFPD996:00000001 [INF] Sending file. Request path: '"/assets/css/table-responesite.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\table-responesite.css"' (27b0a520)
+2020-08-30T09:57:14.0344074+09:00 0HM2CFUFPD991:00000001 [INF] Sending file. Request path: '"/assets/css/slick.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\slick.css"' (27b0a520)
+2020-08-30T09:57:14.0365221+09:00 0HM2CFUFPD997:00000001 [INF] Sending file. Request path: '"/assets/css/clock.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\clock.css"' (27b0a520)
+2020-08-30T09:57:14.0402030+09:00 0HM2CFUFPD992:00000001 [INF] Sending file. Request path: '"/assets/css/animate.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\animate.css"' (27b0a520)
+2020-08-30T09:57:14.0414713+09:00 0HM2CFUFPD995:00000001 [INF] Sending file. Request path: '"/assets/css/style.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\style.css"' (27b0a520)
+2020-08-30T09:57:14.0546087+09:00 0HM2CFUFPD993:00000001 [INF] Request finished in 81.3909ms 200 text/css (791a596a)
+2020-08-30T09:57:14.0599151+09:00 0HM2CFUFPD99B:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/bootstrap.min.js   (ca22a1cb)
+2020-08-30T09:57:14.0651146+09:00 0HM2CFUFPD99B:00000001 [INF] Sending file. Request path: '"/assets/js/bootstrap.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\bootstrap.min.js"' (27b0a520)
+2020-08-30T09:57:14.0914174+09:00 0HM2CFUFPD99B:00000001 [INF] Request finished in 27.7074ms 200 application/javascript (791a596a)
+2020-08-30T09:57:14.0925988+09:00 0HM2CFUFPD99F:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/jquery.magnific-popup.min.js   (ca22a1cb)
+2020-08-30T09:57:14.0931432+09:00 0HM2CFUFPD990:00000001 [INF] Request finished in 119.3975ms 200 text/css (791a596a)
+2020-08-30T09:57:14.0942851+09:00 0HM2CFUFPD999:00000001 [INF] Request finished in 80.5133ms 200 application/javascript (791a596a)
+2020-08-30T09:57:14.1010111+09:00 0HM2CFUFPD99F:00000001 [INF] Sending file. Request path: '"/assets/js/jquery.magnific-popup.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\jquery.magnific-popup.min.js"' (27b0a520)
+2020-08-30T09:57:14.1054855+09:00 0HM2CFUFPD99E:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/imagesloaded.pkgd.min.js   (ca22a1cb)
+2020-08-30T09:57:14.1066385+09:00 0HM2CFUFPD99G:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/scrolling-nav.js   (ca22a1cb)
+2020-08-30T09:57:14.1129557+09:00 0HM2CFUFPD996:00000001 [INF] Request finished in 108.7608ms 200 text/css (791a596a)
+2020-08-30T09:57:14.1156973+09:00 0HM2CFUFPD99E:00000001 [INF] Sending file. Request path: '"/assets/js/imagesloaded.pkgd.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\imagesloaded.pkgd.min.js"' (27b0a520)
+2020-08-30T09:57:14.1178265+09:00 0HM2CFUFPD99F:00000001 [INF] Request finished in 23.4929ms 200 application/javascript (791a596a)
+2020-08-30T09:57:14.1184683+09:00 0HM2CFUFPD99I:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/jquery.easing.min.js   (ca22a1cb)
+2020-08-30T09:57:14.1195395+09:00 0HM2CFUFPD99G:00000001 [INF] Sending file. Request path: '"/assets/js/scrolling-nav.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\scrolling-nav.js"' (27b0a520)
+2020-08-30T09:57:14.1275300+09:00 0HM2CFUFPD99I:00000001 [INF] Sending file. Request path: '"/assets/js/jquery.easing.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\jquery.easing.min.js"' (27b0a520)
+2020-08-30T09:57:14.1311889+09:00 0HM2CFUFPD99J:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/main.js   (ca22a1cb)
+2020-08-30T09:57:14.1332053+09:00 0HM2CFUFPD99E:00000001 [INF] Request finished in 22.5927ms 200 application/javascript (791a596a)
+2020-08-30T09:57:14.1390855+09:00 0HM2CFUFPD99G:00000001 [INF] Request finished in 27.4123ms 200 application/javascript (791a596a)
+2020-08-30T09:57:14.1415191+09:00 0HM2CFUFPD99J:00000001 [INF] Sending file. Request path: '"/assets/js/main.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\main.js"' (27b0a520)
+2020-08-30T09:57:14.1438803+09:00 0HM2CFUFPD994:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/default.css   (ca22a1cb)
+2020-08-30T09:57:14.1461045+09:00 0HM2CFUFPD99I:00000001 [INF] Request finished in 26.2941ms 200 application/javascript (791a596a)
+2020-08-30T09:57:14.1639560+09:00 0HM2CFUFPD998:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/vendor/jquery-1.12.4.min.js   (ca22a1cb)
+2020-08-30T09:57:14.1662168+09:00 0HM2CFUFPD994:00000001 [INF] Sending file. Request path: '"/assets/css/default.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\default.css"' (27b0a520)
+2020-08-30T09:57:14.1687776+09:00 0HM2CFUFPD99D:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/isotope.pkgd.min.js   (ca22a1cb)
+2020-08-30T09:57:14.1729920+09:00 0HM2CFUFPD998:00000001 [INF] Sending file. Request path: '"/assets/js/vendor/jquery-1.12.4.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\vendor\jquery-1.12.4.min.js"' (27b0a520)
+2020-08-30T09:57:14.1743524+09:00 0HM2CFUFPD99D:00000001 [INF] Sending file. Request path: '"/assets/js/isotope.pkgd.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\isotope.pkgd.min.js"' (27b0a520)
+2020-08-30T09:57:14.1762345+09:00 0HM2CFUFPD99H:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/wow.min.js   (ca22a1cb)
+2020-08-30T09:57:14.1775547+09:00 0HM2CFUFPD99K:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/images/logo.png   (ca22a1cb)
+2020-08-30T09:57:14.1835823+09:00 0HM2CFUFPD99L:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/clock.js   (ca22a1cb)
+2020-08-30T09:57:14.1862154+09:00 0HM2CFUFPD99D:00000001 [INF] Request finished in 15.5443ms 200 application/javascript (791a596a)
+2020-08-30T09:57:14.1888411+09:00 0HM2CFUFPD99M:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/images/logo-alt.png   (ca22a1cb)
+2020-08-30T09:57:14.1895084+09:00 0HM2CFUFPD99L:00000001 [INF] Sending file. Request path: '"/assets/js/clock.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\clock.js"' (27b0a520)
+2020-08-30T09:57:14.1988826+09:00 0HM2CFUFPD99M:00000001 [INF] Sending file. Request path: '"/assets/images/logo-alt.png"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\images\logo-alt.png"' (27b0a520)
+2020-08-30T09:57:14.2005389+09:00 0HM2CFUFPD99L:00000001 [INF] Request finished in 18.1775ms 200 application/javascript (791a596a)
+2020-08-30T09:57:14.2013287+09:00 0HM2CFUFPD99H:00000001 [INF] Sending file. Request path: '"/assets/js/wow.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\wow.min.js"' (27b0a520)
+2020-08-30T09:57:14.2033439+09:00 0HM2CFUFPD99K:00000001 [INF] Sending file. Request path: '"/assets/images/logo.png"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\images\logo.png"' (27b0a520)
+2020-08-30T09:57:14.2103004+09:00 0HM2CFUFPD99M:00000001 [INF] Request finished in 23.2436ms 200 image/png (791a596a)
+2020-08-30T09:57:14.2123502+09:00 0HM2CFUFPD991:00000001 [INF] Request finished in 113.589ms 200 text/css (791a596a)
+2020-08-30T09:57:14.2232156+09:00 0HM2CFUFPD99K:00000001 [INF] Request finished in 87.6968ms 200 image/png (791a596a)
+2020-08-30T09:57:14.2322479+09:00 0HM2CFUFPD99J:00000001 [INF] Request finished in 96.6905ms 200 application/javascript (791a596a)
+2020-08-30T09:57:14.2342392+09:00 0HM2CFUFPD992:00000001 [INF] Request finished in 251.9192ms 200 text/css (791a596a)
+2020-08-30T09:57:14.2349111+09:00 0HM2CFUFPD99H:00000001 [INF] Request finished in 59.972ms 200 application/javascript (791a596a)
+2020-08-30T09:57:14.2442149+09:00 0HM2CFUFPD995:00000001 [INF] Request finished in 252.6423ms 200 text/css (791a596a)
+2020-08-30T09:57:14.2486209+09:00 0HM2CFUFPD998:00000001 [INF] Request finished in 94.527ms 200 application/javascript (791a596a)
+2020-08-30T09:57:14.2515180+09:00 0HM2CFUFPD98V:00000002 [INF] Request finished in 302.5113ms 200 text/css (791a596a)
+2020-08-30T09:57:14.2581084+09:00 0HM2CFUFPD994:00000001 [INF] Request finished in 84.1644ms 200 text/css (791a596a)
+2020-08-30T09:57:14.2594252+09:00 0HM2CFUFPD997:00000001 [INF] Request finished in 110.2209ms 200 text/css (791a596a)
+2020-08-30T09:57:14.2988282+09:00 0HM2CFUFPD99A:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/popper.min.js   (ca22a1cb)
+2020-08-30T09:57:14.3060922+09:00 0HM2CFUFPD99A:00000001 [INF] Sending file. Request path: '"/assets/js/popper.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\popper.min.js"' (27b0a520)
+2020-08-30T09:57:14.3072062+09:00 0HM2CFUFPD99C:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/slick.min.js   (ca22a1cb)
+2020-08-30T09:57:14.3078503+09:00 0HM2CFUFPD98U:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/img/alarm_light.jpg   (ca22a1cb)
+2020-08-30T09:57:14.3113227+09:00 0HM2CFUFPD99C:00000001 [INF] Sending file. Request path: '"/assets/js/slick.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\slick.min.js"' (27b0a520)
+2020-08-30T09:57:14.3165398+09:00 0HM2CFUFPD99A:00000001 [INF] Request finished in 224.9948ms 200 application/javascript (791a596a)
+2020-08-30T09:57:14.3192106+09:00 0HM2CFUFPD99C:00000001 [INF] Request finished in 230.0712ms 200 application/javascript (791a596a)
+2020-08-30T09:57:14.3240715+09:00 0HM2CFUFPD98U:00000002 [INF] Request finished in 20.5874ms 404  (791a596a)
+2020-08-30T09:57:14.3478753+09:00 0HM2CFUFPD993:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/fonts/LineIcons.ttf?y2l643   (ca22a1cb)
+2020-08-30T09:57:14.3514399+09:00 0HM2CFUFPD993:00000002 [INF] Sending file. Request path: '"/assets/fonts/LineIcons.ttf"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\fonts\LineIcons.ttf"' (27b0a520)
+2020-08-30T09:57:14.3587207+09:00 0HM2CFUFPD993:00000002 [INF] Request finished in 10.6716ms 200 application/x-font-ttf (791a596a)
+2020-08-30T10:02:12.9513268+09:00  [WRN] No type was specified for the decimal column '"Balance"' on entity type '"AppUser"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-08-30T10:02:12.9598474+09:00  [WRN] No type was specified for the decimal column '"Value5"' on entity type '"SystemConfig"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-08-30T10:02:13.0469251+09:00  [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2020-08-30T10:02:13.4483236+09:00  [INF] Executed DbCommand ("31"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T10:02:13.4957082+09:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T10:02:13.5117155+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2020-08-30T10:02:13.5171696+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Slides] AS [s]" (0723d8ff)
+2020-08-30T10:02:13.5210851+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ContactDetails] AS [c]" (0723d8ff)
+2020-08-30T10:02:13.5254312+09:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2020-08-30T10:02:13.5729997+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T10:02:13.5775472+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T10:02:13.5817803+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T10:02:13.8249765+09:00 0HM2CG1AEBSO3:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50638/  0 (ca22a1cb)
+2020-08-30T10:02:13.8265191+09:00 0HM2CG1AEBSO4:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2020-08-30T10:02:13.9004543+09:00 0HM2CG1AEBSO3:00000001 [INF] Request finished in 108.4375ms 200  (791a596a)
+2020-08-30T10:02:14.1860707+09:00 0HM2CG1AEBSO4:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-08-30T10:02:14.1973056+09:00 0HM2CG1AEBSO4:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2020-08-30T10:02:14.2388021+09:00 0HM2CG1AEBSO4:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Content], [x].[Description], [x].[DisplayOrder], [x].[Image], [x].[Name], [x].[OrtherPageHome], [x].[Status], [x].[Url]
+FROM [Slides] AS [x]
+WHERE [x].[Status] = 1
+ORDER BY [x].[DisplayOrder]" (0723d8ff)
+2020-08-30T10:02:14.3804686+09:00 0HM2CG1AEBSO4:00000001 [INF] Executed DbCommand ("29"ms) [Parameters=["@__HomeFag_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] IS NULL AND ([x].[HomeFlag] = @__HomeFag_0)) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:02:14.4161121+09:00 0HM2CG1AEBSO4:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__HomeFag_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] IS NULL AND ([x].[HomeFlag] = @__HomeFag_0)) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:02:14.4282413+09:00 0HM2CG1AEBSO4:00000001 [WRN] Query: '"(from Contact <generated>_1 in DbSet<Contact> select [<generated>_1]).FirstOrDefault()"' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results. (6af4db4b)
+2020-08-30T10:02:14.4393096+09:00 0HM2CG1AEBSO4:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[Address], [c].[Bank1], [c].[Bank2], [c].[Bank3], [c].[Email], [c].[Name], [c].[Phone], [c].[Status]
+FROM [ContactDetails] AS [c]" (0723d8ff)
+2020-08-30T10:02:14.4632169+09:00 0HM2CG1AEBSO4:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[Status] = 1) AND [x].[ParentId] IS NULL
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:02:14.4761891+09:00 0HM2CG1AEBSO4:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__parentId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] = @__parentId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:02:14.4981325+09:00 0HM2CG1AEBSO4:00000001 [INF] Executed DbCommand ("11"ms) [Parameters=["@__categoryId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[CategoryId], [x].[Comment], [x].[DateCreated], [x].[DateModified], [x].[MadeIn], [x].[Model], [x].[Name], [x].[Price], [x].[ProductStatus], [x].[Status]
+FROM [Products] AS [x]
+WHERE ([x].[CategoryId] = @__categoryId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[Name]" (0723d8ff)
+2020-08-30T10:02:14.5476608+09:00 0HM2CG1AEBSO4:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__parentId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] = @__parentId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:02:14.5519125+09:00 0HM2CG1AEBSO4:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__parentId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] = @__parentId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:02:14.5544258+09:00 0HM2CG1AEBSO4:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__parentId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] = @__parentId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:02:14.6143153+09:00 0HM2CG1AEBSO4:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [x].[Id], [x].[Name], [x].[Status], [x].[Value1], [x].[Value2], [x].[Value3], [x].[Value4], [x].[Value5]
+FROM [SystemConfigs] AS [x]
+WHERE [x].[Id] = @__id_0" (0723d8ff)
+2020-08-30T10:02:14.6392131+09:00 0HM2CG1AEBSO4:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [x].[Id], [x].[Name], [x].[Status], [x].[Value1], [x].[Value2], [x].[Value3], [x].[Value4], [x].[Value5]
+FROM [SystemConfigs] AS [x]
+WHERE [x].[Id] = @__id_0" (0723d8ff)
+2020-08-30T10:02:14.6434484+09:00 0HM2CG1AEBSO4:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [x].[Id], [x].[Name], [x].[Status], [x].[Value1], [x].[Value2], [x].[Value3], [x].[Value4], [x].[Value5]
+FROM [SystemConfigs] AS [x]
+WHERE [x].[Id] = @__id_0" (0723d8ff)
+2020-08-30T10:02:18.1624773+09:00 0HM2CG1AEBSO4:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2020-08-30T10:02:18.3358676+09:00 0HM2CG1AEBSO4:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 4177.3795ms (afa2e885)
+2020-08-30T10:02:18.3477419+09:00 0HM2CG1AEBSO3:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/bootstrap.min.css   (ca22a1cb)
+2020-08-30T10:02:18.3627607+09:00 0HM2CG1AEBSO6:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/magnific-popup.css   (ca22a1cb)
+2020-08-30T10:02:18.3636273+09:00 0HM2CG1AEBSO5:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/LineIcons.css   (ca22a1cb)
+2020-08-30T10:02:18.3673630+09:00 0HM2CG1AEBSO4:00000001 [INF] Request finished in 4569.6013ms 200 text/html; charset=utf-8 (791a596a)
+2020-08-30T10:02:18.3728832+09:00 0HM2CG1AEBSOB:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/clock.css   (ca22a1cb)
+2020-08-30T10:02:18.3799562+09:00 0HM2CG1AEBSOA:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/animate.css   (ca22a1cb)
+2020-08-30T10:02:18.4012548+09:00 0HM2CG1AEBSO4:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/vendor/modernizr-3.6.0.min.js   (ca22a1cb)
+2020-08-30T10:02:18.4314668+09:00 0HM2CG1AEBSO7:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/slick.css   (ca22a1cb)
+2020-08-30T10:02:18.4380930+09:00 0HM2CG1AEBSO6:00000001 [INF] Sending file. Request path: '"/assets/css/magnific-popup.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\magnific-popup.css"' (27b0a520)
+2020-08-30T10:02:18.4396489+09:00 0HM2CG1AEBSO5:00000001 [INF] Sending file. Request path: '"/assets/css/LineIcons.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\LineIcons.css"' (27b0a520)
+2020-08-30T10:02:18.4407859+09:00 0HM2CG1AEBSO4:00000002 [INF] Sending file. Request path: '"/assets/js/vendor/modernizr-3.6.0.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\vendor\modernizr-3.6.0.min.js"' (27b0a520)
+2020-08-30T10:02:18.4440995+09:00 0HM2CG1AEBSO3:00000002 [INF] Sending file. Request path: '"/assets/css/bootstrap.min.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\bootstrap.min.css"' (27b0a520)
+2020-08-30T10:02:18.4446786+09:00 0HM2CG1AEBSOB:00000001 [INF] Sending file. Request path: '"/assets/css/clock.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\clock.css"' (27b0a520)
+2020-08-30T10:02:18.4484035+09:00 0HM2CG1AEBSOA:00000001 [INF] Sending file. Request path: '"/assets/css/animate.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\animate.css"' (27b0a520)
+2020-08-30T10:02:18.4510103+09:00 0HM2CG1AEBSO7:00000001 [INF] Sending file. Request path: '"/assets/css/slick.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\slick.css"' (27b0a520)
+2020-08-30T10:02:18.4525298+09:00 0HM2CG1AEBSO9:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/style.css   (ca22a1cb)
+2020-08-30T10:02:18.4573830+09:00 0HM2CG1AEBSO8:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/default.css   (ca22a1cb)
+2020-08-30T10:02:18.4582493+09:00 0HM2CG1AEBSO9:00000001 [INF] Sending file. Request path: '"/assets/css/style.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\style.css"' (27b0a520)
+2020-08-30T10:02:18.4610653+09:00 0HM2CG1AEBSO8:00000001 [INF] Sending file. Request path: '"/assets/css/default.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\default.css"' (27b0a520)
+2020-08-30T10:02:18.4772208+09:00 0HM2CG1AEBSO8:00000001 [INF] Request finished in 123.5044ms 200 text/css (791a596a)
+2020-08-30T10:02:18.4835159+09:00 0HM2CG1AEBSOC:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/table-responesite.css   (ca22a1cb)
+2020-08-30T10:02:18.4895576+09:00 0HM2CG1AEBSOC:00000001 [INF] Sending file. Request path: '"/assets/css/table-responesite.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\table-responesite.css"' (27b0a520)
+2020-08-30T10:02:18.5198891+09:00 0HM2CG1AEBSO6:00000001 [INF] Request finished in 159.6217ms 200 text/css (791a596a)
+2020-08-30T10:02:18.5205951+09:00 0HM2CG1AEBSO5:00000001 [INF] Request finished in 154.922ms 200 text/css (791a596a)
+2020-08-30T10:02:18.5261893+09:00 0HM2CG1AEBSO4:00000002 [INF] Request finished in 136.6381ms 200 application/javascript (791a596a)
+2020-08-30T10:02:18.5314563+09:00 0HM2CG1AEBSOJ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/imagesloaded.pkgd.min.js   (ca22a1cb)
+2020-08-30T10:02:18.5331611+09:00 0HM2CG1AEBSOF:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/bootstrap.min.js   (ca22a1cb)
+2020-08-30T10:02:18.5372897+09:00 0HM2CG1AEBSOD:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/popper.min.js   (ca22a1cb)
+2020-08-30T10:02:18.5394132+09:00 0HM2CG1AEBSOJ:00000001 [INF] Sending file. Request path: '"/assets/js/imagesloaded.pkgd.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\imagesloaded.pkgd.min.js"' (27b0a520)
+2020-08-30T10:02:18.5400043+09:00 0HM2CG1AEBSOF:00000001 [INF] Sending file. Request path: '"/assets/js/bootstrap.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\bootstrap.min.js"' (27b0a520)
+2020-08-30T10:02:18.5416538+09:00 0HM2CG1AEBSOH:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/isotope.pkgd.min.js   (ca22a1cb)
+2020-08-30T10:02:18.5439511+09:00 0HM2CG1AEBSOB:00000001 [INF] Request finished in 155.2281ms 200 text/css (791a596a)
+2020-08-30T10:02:18.5462677+09:00 0HM2CG1AEBSOD:00000001 [INF] Sending file. Request path: '"/assets/js/popper.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\popper.min.js"' (27b0a520)
+2020-08-30T10:02:18.5477210+09:00 0HM2CG1AEBSOH:00000001 [INF] Sending file. Request path: '"/assets/js/isotope.pkgd.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\isotope.pkgd.min.js"' (27b0a520)
+2020-08-30T10:02:18.5572240+09:00 0HM2CG1AEBSOF:00000001 [INF] Request finished in 22.7174ms 200 application/javascript (791a596a)
+2020-08-30T10:02:18.5578317+09:00 0HM2CG1AEBSOJ:00000001 [INF] Request finished in 22.1577ms 200 application/javascript (791a596a)
+2020-08-30T10:02:18.5696733+09:00 0HM2CG1AEBSOH:00000001 [INF] Request finished in 29.8005ms 200 application/javascript (791a596a)
+2020-08-30T10:02:18.5721158+09:00 0HM2CG1AEBSOM:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/jquery.easing.min.js   (ca22a1cb)
+2020-08-30T10:02:18.5726359+09:00 0HM2CG1AEBSOO:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/images/logo.png   (ca22a1cb)
+2020-08-30T10:02:18.5791507+09:00 0HM2CG1AEBSOM:00000001 [INF] Sending file. Request path: '"/assets/js/jquery.easing.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\jquery.easing.min.js"' (27b0a520)
+2020-08-30T10:02:18.5819451+09:00 0HM2CG1AEBSOO:00000001 [INF] Sending file. Request path: '"/assets/images/logo.png"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\images\logo.png"' (27b0a520)
+2020-08-30T10:02:18.5833544+09:00 0HM2CG1AEBSOD:00000001 [INF] Request finished in 40.8589ms 200 application/javascript (791a596a)
+2020-08-30T10:02:18.5848918+09:00 0HM2CG1AEBSOI:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/jquery.magnific-popup.min.js   (ca22a1cb)
+2020-08-30T10:02:18.5856329+09:00 0HM2CG1AEBSOK:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/scrolling-nav.js   (ca22a1cb)
+2020-08-30T10:02:18.5885741+09:00 0HM2CG1AEBSOG:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/slick.min.js   (ca22a1cb)
+2020-08-30T10:02:18.5940761+09:00 0HM2CG1AEBSOM:00000001 [INF] Request finished in 24.4623ms 200 application/javascript (791a596a)
+2020-08-30T10:02:18.5946092+09:00 0HM2CG1AEBSOO:00000001 [INF] Request finished in 22.2637ms 200 image/png (791a596a)
+2020-08-30T10:02:18.5958350+09:00 0HM2CG1AEBSOI:00000001 [INF] Sending file. Request path: '"/assets/js/jquery.magnific-popup.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\jquery.magnific-popup.min.js"' (27b0a520)
+2020-08-30T10:02:18.6067747+09:00 0HM2CG1AEBSOP:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/images/logo-alt.png   (ca22a1cb)
+2020-08-30T10:02:18.6078363+09:00 0HM2CG1AEBSON:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/wow.min.js   (ca22a1cb)
+2020-08-30T10:02:18.6083445+09:00 0HM2CG1AEBSOI:00000001 [INF] Request finished in 27.965ms 200 application/javascript (791a596a)
+2020-08-30T10:02:18.6099324+09:00 0HM2CG1AEBSOL:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/main.js   (ca22a1cb)
+2020-08-30T10:02:18.6141883+09:00 0HM2CG1AEBSOP:00000001 [INF] Sending file. Request path: '"/assets/images/logo-alt.png"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\images\logo-alt.png"' (27b0a520)
+2020-08-30T10:02:18.6168198+09:00 0HM2CG1AEBSON:00000001 [INF] Sending file. Request path: '"/assets/js/wow.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\wow.min.js"' (27b0a520)
+2020-08-30T10:02:18.6196287+09:00 0HM2CG1AEBSOQ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/clock.js   (ca22a1cb)
+2020-08-30T10:02:18.6201452+09:00 0HM2CG1AEBSOK:00000001 [INF] Sending file. Request path: '"/assets/js/scrolling-nav.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\scrolling-nav.js"' (27b0a520)
+2020-08-30T10:02:18.6219398+09:00 0HM2CG1AEBSOL:00000001 [INF] Sending file. Request path: '"/assets/js/main.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\main.js"' (27b0a520)
+2020-08-30T10:02:18.6281840+09:00 0HM2CG1AEBSOP:00000001 [INF] Request finished in 22.7873ms 200 image/png (791a596a)
+2020-08-30T10:02:18.6310536+09:00 0HM2CG1AEBSOQ:00000001 [INF] Sending file. Request path: '"/assets/js/clock.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\clock.js"' (27b0a520)
+2020-08-30T10:02:18.6341917+09:00 0HM2CG1AEBSON:00000001 [INF] Request finished in 26.7598ms 200 application/javascript (791a596a)
+2020-08-30T10:02:18.6364308+09:00 0HM2CG1AEBSOG:00000001 [INF] Sending file. Request path: '"/assets/js/slick.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\slick.min.js"' (27b0a520)
+2020-08-30T10:02:18.6384582+09:00 0HM2CG1AEBSOL:00000001 [INF] Request finished in 41.6321ms 200 application/javascript (791a596a)
+2020-08-30T10:02:18.6453534+09:00 0HM2CG1AEBSOQ:00000001 [INF] Request finished in 25.7998ms 200 application/javascript (791a596a)
+2020-08-30T10:02:18.6582976+09:00 0HM2CG1AEBSO9:00000001 [INF] Request finished in 298.8257ms 200 text/css (791a596a)
+2020-08-30T10:02:18.6588842+09:00 0HM2CG1AEBSOK:00000001 [INF] Request finished in 93.9034ms 200 application/javascript (791a596a)
+2020-08-30T10:02:18.6600197+09:00 0HM2CG1AEBSOA:00000001 [INF] Request finished in 296.7716ms 200 text/css (791a596a)
+2020-08-30T10:02:18.6653340+09:00 0HM2CG1AEBSO3:00000002 [INF] Request finished in 309.2988ms 200 text/css (791a596a)
+2020-08-30T10:02:18.6661965+09:00 0HM2CG1AEBSOG:00000001 [INF] Request finished in 128.9421ms 200 application/javascript (791a596a)
+2020-08-30T10:02:18.6678644+09:00 0HM2CG1AEBSO7:00000001 [INF] Request finished in 154.9291ms 200 text/css (791a596a)
+2020-08-30T10:02:18.6730922+09:00 0HM2CG1AEBSOE:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/vendor/jquery-1.12.4.min.js   (ca22a1cb)
+2020-08-30T10:02:18.6772601+09:00 0HM2CG1AEBSOC:00000001 [INF] Request finished in 30.7366ms 200 text/css (791a596a)
+2020-08-30T10:02:18.6786386+09:00 0HM2CG1AEBSOE:00000001 [INF] Sending file. Request path: '"/assets/js/vendor/jquery-1.12.4.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\vendor\jquery-1.12.4.min.js"' (27b0a520)
+2020-08-30T10:02:18.6858946+09:00 0HM2CG1AEBSO8:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/img/alarm_light.jpg   (ca22a1cb)
+2020-08-30T10:02:18.6943812+09:00 0HM2CG1AEBSOE:00000001 [INF] Request finished in 171.0624ms 200 application/javascript (791a596a)
+2020-08-30T10:02:18.7009063+09:00 0HM2CG1AEBSO8:00000002 [INF] Request finished in 18.047ms 404  (791a596a)
+2020-08-30T10:02:18.7389492+09:00 0HM2CG1AEBSO7:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/fonts/LineIcons.ttf?y2l643   (ca22a1cb)
+2020-08-30T10:02:18.7421446+09:00 0HM2CG1AEBSO7:00000002 [INF] Sending file. Request path: '"/assets/fonts/LineIcons.ttf"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\fonts\LineIcons.ttf"' (27b0a520)
+2020-08-30T10:02:18.7480171+09:00 0HM2CG1AEBSO7:00000002 [INF] Request finished in 8.9656ms 200 application/x-font-ttf (791a596a)
+2020-08-30T10:05:27.1701471+09:00  [WRN] No type was specified for the decimal column '"Balance"' on entity type '"AppUser"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-08-30T10:05:27.1807986+09:00  [WRN] No type was specified for the decimal column '"Value5"' on entity type '"SystemConfig"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-08-30T10:05:27.2704460+09:00  [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2020-08-30T10:05:27.6502247+09:00  [INF] Executed DbCommand ("24"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T10:05:27.7035554+09:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T10:05:27.7218662+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2020-08-30T10:05:27.7287501+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Slides] AS [s]" (0723d8ff)
+2020-08-30T10:05:27.7327840+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ContactDetails] AS [c]" (0723d8ff)
+2020-08-30T10:05:27.7368628+09:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2020-08-30T10:05:27.7833769+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T10:05:27.7877692+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T10:05:27.7922381+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T10:05:28.0521596+09:00 0HM2CG34AIGSD:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50638/  0 (ca22a1cb)
+2020-08-30T10:05:28.0531360+09:00 0HM2CG34AIGSC:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2020-08-30T10:05:28.1137086+09:00 0HM2CG34AIGSD:00000001 [INF] Request finished in 85.2014ms 200  (791a596a)
+2020-08-30T10:05:28.4102023+09:00 0HM2CG34AIGSC:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-08-30T10:05:28.4207925+09:00 0HM2CG34AIGSC:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2020-08-30T10:05:28.4692762+09:00 0HM2CG34AIGSC:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Content], [x].[Description], [x].[DisplayOrder], [x].[Image], [x].[Name], [x].[OrtherPageHome], [x].[Status], [x].[Url]
+FROM [Slides] AS [x]
+WHERE [x].[Status] = 1
+ORDER BY [x].[DisplayOrder]" (0723d8ff)
+2020-08-30T10:05:28.6034842+09:00 0HM2CG34AIGSC:00000001 [INF] Executed DbCommand ("32"ms) [Parameters=["@__HomeFag_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] IS NULL AND ([x].[HomeFlag] = @__HomeFag_0)) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:05:28.6419052+09:00 0HM2CG34AIGSC:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__HomeFag_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] IS NULL AND ([x].[HomeFlag] = @__HomeFag_0)) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:05:28.6543846+09:00 0HM2CG34AIGSC:00000001 [WRN] Query: '"(from Contact <generated>_1 in DbSet<Contact> select [<generated>_1]).FirstOrDefault()"' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results. (6af4db4b)
+2020-08-30T10:05:28.6670655+09:00 0HM2CG34AIGSC:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[Address], [c].[Bank1], [c].[Bank2], [c].[Bank3], [c].[Email], [c].[Name], [c].[Phone], [c].[Status]
+FROM [ContactDetails] AS [c]" (0723d8ff)
+2020-08-30T10:05:28.6919911+09:00 0HM2CG34AIGSC:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[Status] = 1) AND [x].[ParentId] IS NULL
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:05:28.6999930+09:00 0HM2CG34AIGSC:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__parentId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] = @__parentId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:05:28.7096335+09:00 0HM2CG34AIGSC:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__categoryId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[CategoryId], [x].[Comment], [x].[DateCreated], [x].[DateModified], [x].[MadeIn], [x].[Model], [x].[Name], [x].[Price], [x].[ProductStatus], [x].[Status]
+FROM [Products] AS [x]
+WHERE ([x].[CategoryId] = @__categoryId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[Name]" (0723d8ff)
+2020-08-30T10:05:28.7422899+09:00 0HM2CG34AIGSC:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__categoryId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[CategoryId], [x].[Comment], [x].[DateCreated], [x].[DateModified], [x].[MadeIn], [x].[Model], [x].[Name], [x].[Price], [x].[ProductStatus], [x].[Status]
+FROM [Products] AS [x]
+WHERE ([x].[CategoryId] = @__categoryId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[Name]" (0723d8ff)
+2020-08-30T10:05:28.7447257+09:00 0HM2CG34AIGSC:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__parentId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] = @__parentId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:05:28.7501510+09:00 0HM2CG34AIGSC:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__categoryId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[CategoryId], [x].[Comment], [x].[DateCreated], [x].[DateModified], [x].[MadeIn], [x].[Model], [x].[Name], [x].[Price], [x].[ProductStatus], [x].[Status]
+FROM [Products] AS [x]
+WHERE ([x].[CategoryId] = @__categoryId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[Name]" (0723d8ff)
+2020-08-30T10:05:28.7525579+09:00 0HM2CG34AIGSC:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__parentId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] = @__parentId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:05:28.7548533+09:00 0HM2CG34AIGSC:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__parentId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] = @__parentId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:05:28.8083158+09:00 0HM2CG34AIGSC:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [x].[Id], [x].[Name], [x].[Status], [x].[Value1], [x].[Value2], [x].[Value3], [x].[Value4], [x].[Value5]
+FROM [SystemConfigs] AS [x]
+WHERE [x].[Id] = @__id_0" (0723d8ff)
+2020-08-30T10:05:28.8358150+09:00 0HM2CG34AIGSC:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [x].[Id], [x].[Name], [x].[Status], [x].[Value1], [x].[Value2], [x].[Value3], [x].[Value4], [x].[Value5]
+FROM [SystemConfigs] AS [x]
+WHERE [x].[Id] = @__id_0" (0723d8ff)
+2020-08-30T10:05:28.8400648+09:00 0HM2CG34AIGSC:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [x].[Id], [x].[Name], [x].[Status], [x].[Value1], [x].[Value2], [x].[Value3], [x].[Value4], [x].[Value5]
+FROM [SystemConfigs] AS [x]
+WHERE [x].[Id] = @__id_0" (0723d8ff)
+2020-08-30T10:05:32.3602359+09:00 0HM2CG34AIGSC:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2020-08-30T10:05:32.5231505+09:00 0HM2CG34AIGSC:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 4149.3112ms (afa2e885)
+2020-08-30T10:05:32.5410826+09:00 0HM2CG34AIGSD:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/bootstrap.min.css   (ca22a1cb)
+2020-08-30T10:05:32.5678207+09:00 0HM2CG34AIGSE:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/slick.css   (ca22a1cb)
+2020-08-30T10:05:32.5712762+09:00 0HM2CG34AIGSL:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/style.css   (ca22a1cb)
+2020-08-30T10:05:32.5723100+09:00 0HM2CG34AIGSC:00000001 [INF] Request finished in 4540.1617ms 200 text/html; charset=utf-8 (791a596a)
+2020-08-30T10:05:32.5799422+09:00 0HM2CG34AIGSH:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/LineIcons.css   (ca22a1cb)
+2020-08-30T10:05:32.5832829+09:00 0HM2CG34AIGSJ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/table-responesite.css   (ca22a1cb)
+2020-08-30T10:05:32.5888818+09:00 0HM2CG34AIGSF:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/default.css   (ca22a1cb)
+2020-08-30T10:05:32.5904159+09:00 0HM2CG34AIGSM:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/popper.min.js   (ca22a1cb)
+2020-08-30T10:05:32.5923961+09:00 0HM2CG34AIGSI:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/magnific-popup.css   (ca22a1cb)
+2020-08-30T10:05:32.5934673+09:00 0HM2CG34AIGSG:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/animate.css   (ca22a1cb)
+2020-08-30T10:05:32.6059188+09:00 0HM2CG34AIGSM:00000001 [INF] Sending file. Request path: '"/assets/js/popper.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\popper.min.js"' (27b0a520)
+2020-08-30T10:05:32.6070950+09:00 0HM2CG34AIGSL:00000001 [INF] Sending file. Request path: '"/assets/css/style.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\style.css"' (27b0a520)
+2020-08-30T10:05:32.6082113+09:00 0HM2CG34AIGSD:00000002 [INF] Sending file. Request path: '"/assets/css/bootstrap.min.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\bootstrap.min.css"' (27b0a520)
+2020-08-30T10:05:32.6147599+09:00 0HM2CG34AIGSE:00000001 [INF] Sending file. Request path: '"/assets/css/slick.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\slick.css"' (27b0a520)
+2020-08-30T10:05:32.6157471+09:00 0HM2CG34AIGSH:00000001 [INF] Sending file. Request path: '"/assets/css/LineIcons.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\LineIcons.css"' (27b0a520)
+2020-08-30T10:05:32.6181589+09:00 0HM2CG34AIGSJ:00000001 [INF] Sending file. Request path: '"/assets/css/table-responesite.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\table-responesite.css"' (27b0a520)
+2020-08-30T10:05:32.6214374+09:00 0HM2CG34AIGSI:00000001 [INF] Sending file. Request path: '"/assets/css/magnific-popup.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\magnific-popup.css"' (27b0a520)
+2020-08-30T10:05:32.6232450+09:00 0HM2CG34AIGSF:00000001 [INF] Sending file. Request path: '"/assets/css/default.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\default.css"' (27b0a520)
+2020-08-30T10:05:32.6311464+09:00 0HM2CG34AIGSG:00000001 [INF] Sending file. Request path: '"/assets/css/animate.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\animate.css"' (27b0a520)
+2020-08-30T10:05:32.6965517+09:00 0HM2CG34AIGSM:00000001 [INF] Request finished in 102.9324ms 200 application/javascript (791a596a)
+2020-08-30T10:05:32.7041205+09:00 0HM2CG34AIGSN:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/clock.css   (ca22a1cb)
+2020-08-30T10:05:32.7053396+09:00 0HM2CG34AIGSO:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/bootstrap.min.js   (ca22a1cb)
+2020-08-30T10:05:32.7077144+09:00 0HM2CG34AIGSE:00000001 [INF] Request finished in 141.6095ms 200 text/css (791a596a)
+2020-08-30T10:05:32.7098106+09:00 0HM2CG34AIGSQ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/slick.min.js   (ca22a1cb)
+2020-08-30T10:05:32.7103401+09:00 0HM2CG34AIGSN:00000001 [INF] Sending file. Request path: '"/assets/css/clock.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\clock.css"' (27b0a520)
+2020-08-30T10:05:32.7174097+09:00 0HM2CG34AIGSO:00000001 [INF] Sending file. Request path: '"/assets/js/bootstrap.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\bootstrap.min.js"' (27b0a520)
+2020-08-30T10:05:32.7197126+09:00 0HM2CG34AIGSQ:00000001 [INF] Sending file. Request path: '"/assets/js/slick.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\slick.min.js"' (27b0a520)
+2020-08-30T10:05:32.7216471+09:00 0HM2CG34AIGSH:00000001 [INF] Request finished in 142.9917ms 200 text/css (791a596a)
+2020-08-30T10:05:32.7235289+09:00 0HM2CG34AIGSS:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/jquery.magnific-popup.min.js   (ca22a1cb)
+2020-08-30T10:05:32.7296247+09:00 0HM2CG34AIGSN:00000001 [INF] Request finished in 27.4106ms 200 text/css (791a596a)
+2020-08-30T10:05:32.7361671+09:00 0HM2CG34AIGSQ:00000001 [INF] Request finished in 23.9924ms 200 application/javascript (791a596a)
+2020-08-30T10:05:32.7373999+09:00 0HM2CG34AIGSR:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/vendor/jquery-1.12.4.min.js   (ca22a1cb)
+2020-08-30T10:05:32.7413719+09:00 0HM2CG34AIGSS:00000001 [INF] Sending file. Request path: '"/assets/js/jquery.magnific-popup.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\jquery.magnific-popup.min.js"' (27b0a520)
+2020-08-30T10:05:32.7426010+09:00 0HM2CG34AIGSV:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/images/logo-alt.png   (ca22a1cb)
+2020-08-30T10:05:32.7485944+09:00 0HM2CG34AIGT0:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/images/logo.png   (ca22a1cb)
+2020-08-30T10:05:32.7495575+09:00 0HM2CG34AIGSR:00000001 [INF] Sending file. Request path: '"/assets/js/vendor/jquery-1.12.4.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\vendor\jquery-1.12.4.min.js"' (27b0a520)
+2020-08-30T10:05:32.7509539+09:00 0HM2CG34AIGSV:00000001 [INF] Sending file. Request path: '"/assets/images/logo-alt.png"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\images\logo-alt.png"' (27b0a520)
+2020-08-30T10:05:32.7572196+09:00 0HM2CG34AIGSS:00000001 [INF] Request finished in 31.1467ms 200 application/javascript (791a596a)
+2020-08-30T10:05:32.7584767+09:00 0HM2CG34AIGT0:00000001 [INF] Sending file. Request path: '"/assets/images/logo.png"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\images\logo.png"' (27b0a520)
+2020-08-30T10:05:32.7659259+09:00 0HM2CG34AIGSV:00000001 [INF] Request finished in 19.9159ms 200 image/png (791a596a)
+2020-08-30T10:05:32.7713252+09:00 0HM2CG34AIGT2:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/wow.min.js   (ca22a1cb)
+2020-08-30T10:05:32.7724957+09:00 0HM2CG34AIGT0:00000001 [INF] Request finished in 24.5155ms 200 image/png (791a596a)
+2020-08-30T10:05:32.7772542+09:00 0HM2CG34AIGSP:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/isotope.pkgd.min.js   (ca22a1cb)
+2020-08-30T10:05:32.7802384+09:00 0HM2CG34AIGT1:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/main.js   (ca22a1cb)
+2020-08-30T10:05:32.7844145+09:00 0HM2CG34AIGT2:00000001 [INF] Sending file. Request path: '"/assets/js/wow.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\wow.min.js"' (27b0a520)
+2020-08-30T10:05:32.7860296+09:00 0HM2CG34AIGST:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/imagesloaded.pkgd.min.js   (ca22a1cb)
+2020-08-30T10:05:32.7867880+09:00 0HM2CG34AIGSP:00000001 [INF] Sending file. Request path: '"/assets/js/isotope.pkgd.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\isotope.pkgd.min.js"' (27b0a520)
+2020-08-30T10:05:32.7917120+09:00 0HM2CG34AIGT1:00000001 [INF] Sending file. Request path: '"/assets/js/main.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\main.js"' (27b0a520)
+2020-08-30T10:05:32.7930658+09:00 0HM2CG34AIGST:00000001 [INF] Sending file. Request path: '"/assets/js/imagesloaded.pkgd.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\imagesloaded.pkgd.min.js"' (27b0a520)
+2020-08-30T10:05:32.7949532+09:00 0HM2CG34AIGSU:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/jquery.easing.min.js   (ca22a1cb)
+2020-08-30T10:05:32.7991258+09:00 0HM2CG34AIGSJ:00000001 [INF] Request finished in 134.8727ms 200 text/css (791a596a)
+2020-08-30T10:05:32.8036524+09:00 0HM2CG34AIGT2:00000001 [INF] Request finished in 37.4576ms 200 application/javascript (791a596a)
+2020-08-30T10:05:32.8043057+09:00 0HM2CG34AIGT3:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/scrolling-nav.js   (ca22a1cb)
+2020-08-30T10:05:32.8053618+09:00 0HM2CG34AIGSP:00000001 [INF] Request finished in 25.7483ms 200 application/javascript (791a596a)
+2020-08-30T10:05:32.8115678+09:00 0HM2CG34AIGT3:00000001 [INF] Sending file. Request path: '"/assets/js/scrolling-nav.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\scrolling-nav.js"' (27b0a520)
+2020-08-30T10:05:32.8145699+09:00 0HM2CG34AIGT1:00000001 [INF] Request finished in 29.7616ms 200 application/javascript (791a596a)
+2020-08-30T10:05:32.8163043+09:00 0HM2CG34AIGSU:00000001 [INF] Sending file. Request path: '"/assets/js/jquery.easing.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\jquery.easing.min.js"' (27b0a520)
+2020-08-30T10:05:32.8176921+09:00 0HM2CG34AIGT4:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/clock.js   (ca22a1cb)
+2020-08-30T10:05:32.8240733+09:00 0HM2CG34AIGSI:00000001 [INF] Request finished in 140.9671ms 200 text/css (791a596a)
+2020-08-30T10:05:32.8278143+09:00 0HM2CG34AIGT4:00000001 [INF] Sending file. Request path: '"/assets/js/clock.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\clock.js"' (27b0a520)
+2020-08-30T10:05:32.8301061+09:00 0HM2CG34AIGT3:00000001 [INF] Request finished in 22.705ms 200 application/javascript (791a596a)
+2020-08-30T10:05:32.8348084+09:00 0HM2CG34AIGSU:00000001 [INF] Request finished in 97.3812ms 200 application/javascript (791a596a)
+2020-08-30T10:05:32.8439084+09:00 0HM2CG34AIGSR:00000001 [INF] Request finished in 110.2125ms 200 application/javascript (791a596a)
+2020-08-30T10:05:32.8455041+09:00 0HM2CG34AIGSG:00000001 [INF] Request finished in 298.8717ms 200 text/css (791a596a)
+2020-08-30T10:05:32.8556652+09:00 0HM2CG34AIGST:00000001 [INF] Request finished in 57.5419ms 200 application/javascript (791a596a)
+2020-08-30T10:05:32.8572779+09:00 0HM2CG34AIGT4:00000001 [INF] Request finished in 27.8167ms 200 application/javascript (791a596a)
+2020-08-30T10:05:32.8588185+09:00 0HM2CG34AIGSL:00000001 [INF] Request finished in 294.7655ms 200 text/css (791a596a)
+2020-08-30T10:05:32.8713565+09:00 0HM2CG34AIGSD:00000002 [INF] Request finished in 307.6889ms 200 text/css (791a596a)
+2020-08-30T10:05:32.8730384+09:00 0HM2CG34AIGSO:00000001 [INF] Request finished in 138.6616ms 200 application/javascript (791a596a)
+2020-08-30T10:05:32.8759894+09:00 0HM2CG34AIGSC:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/img/alarm_light.jpg   (ca22a1cb)
+2020-08-30T10:05:32.8839217+09:00 0HM2CG34AIGSF:00000001 [INF] Request finished in 144.5343ms 200 text/css (791a596a)
+2020-08-30T10:05:32.8855930+09:00 0HM2CG34AIGSK:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/vendor/modernizr-3.6.0.min.js   (ca22a1cb)
+2020-08-30T10:05:32.8895202+09:00 0HM2CG34AIGSK:00000001 [INF] Sending file. Request path: '"/assets/js/vendor/modernizr-3.6.0.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\vendor\modernizr-3.6.0.min.js"' (27b0a520)
+2020-08-30T10:05:32.8934736+09:00 0HM2CG34AIGSK:00000001 [INF] Request finished in 195.9875ms 200 application/javascript (791a596a)
+2020-08-30T10:05:32.8989154+09:00 0HM2CG34AIGSC:00000002 [INF] Request finished in 27.7834ms 404  (791a596a)
+2020-08-30T10:05:32.9207747+09:00 0HM2CG34AIGSJ:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/fonts/LineIcons.ttf?y2l643   (ca22a1cb)
+2020-08-30T10:05:32.9244723+09:00 0HM2CG34AIGSJ:00000002 [INF] Sending file. Request path: '"/assets/fonts/LineIcons.ttf"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\fonts\LineIcons.ttf"' (27b0a520)
+2020-08-30T10:05:32.9301716+09:00 0HM2CG34AIGSJ:00000002 [INF] Request finished in 8.4166ms 200 application/x-font-ttf (791a596a)
+2020-08-30T10:11:46.2170721+09:00  [WRN] No type was specified for the decimal column '"Balance"' on entity type '"AppUser"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-08-30T10:11:46.2460889+09:00  [WRN] No type was specified for the decimal column '"Value5"' on entity type '"SystemConfig"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-08-30T10:11:46.3241245+09:00  [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2020-08-30T10:11:46.6940484+09:00  [INF] Executed DbCommand ("24"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T10:11:46.7465273+09:00  [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T10:11:46.7653333+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2020-08-30T10:11:46.7723652+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Slides] AS [s]" (0723d8ff)
+2020-08-30T10:11:46.7778463+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ContactDetails] AS [c]" (0723d8ff)
+2020-08-30T10:11:46.7818994+09:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2020-08-30T10:11:46.8325470+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T10:11:46.8377646+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T10:11:46.8425211+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T10:11:47.2175967+09:00 0HM2CG6LANGAF:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2020-08-30T10:11:47.2166336+09:00 0HM2CG6LANGAE:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50638/  0 (ca22a1cb)
+2020-08-30T10:11:47.2719780+09:00 0HM2CG6LANGAE:00000001 [INF] Request finished in 83.0929ms 200  (791a596a)
+2020-08-30T10:11:47.5397120+09:00 0HM2CG6LANGAF:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-08-30T10:11:47.5505209+09:00 0HM2CG6LANGAF:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2020-08-30T10:11:47.6061457+09:00 0HM2CG6LANGAF:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Content], [x].[Description], [x].[DisplayOrder], [x].[Image], [x].[Name], [x].[OrtherPageHome], [x].[Status], [x].[Url]
+FROM [Slides] AS [x]
+WHERE [x].[Status] = 1
+ORDER BY [x].[DisplayOrder]" (0723d8ff)
+2020-08-30T10:11:47.7474504+09:00 0HM2CG6LANGAF:00000001 [INF] Executed DbCommand ("35"ms) [Parameters=["@__HomeFag_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] IS NULL AND ([x].[HomeFlag] = @__HomeFag_0)) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:11:47.7850071+09:00 0HM2CG6LANGAF:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__HomeFag_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] IS NULL AND ([x].[HomeFlag] = @__HomeFag_0)) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:11:47.7980070+09:00 0HM2CG6LANGAF:00000001 [WRN] Query: '"(from Contact <generated>_1 in DbSet<Contact> select [<generated>_1]).FirstOrDefault()"' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results. (6af4db4b)
+2020-08-30T10:11:47.8104077+09:00 0HM2CG6LANGAF:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[Address], [c].[Bank1], [c].[Bank2], [c].[Bank3], [c].[Email], [c].[Name], [c].[Phone], [c].[Status]
+FROM [ContactDetails] AS [c]" (0723d8ff)
+2020-08-30T10:11:47.8346586+09:00 0HM2CG6LANGAF:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[Status] = 1) AND [x].[ParentId] IS NULL
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:11:47.8445737+09:00 0HM2CG6LANGAF:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__parentId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] = @__parentId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:11:47.8533420+09:00 0HM2CG6LANGAF:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__categoryId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[CategoryId], [x].[Comment], [x].[DateCreated], [x].[DateModified], [x].[MadeIn], [x].[Model], [x].[Name], [x].[Price], [x].[ProductStatus], [x].[Status]
+FROM [Products] AS [x]
+WHERE ([x].[CategoryId] = @__categoryId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[Name]" (0723d8ff)
+2020-08-30T10:11:47.8860231+09:00 0HM2CG6LANGAF:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__categoryId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[CategoryId], [x].[Comment], [x].[DateCreated], [x].[DateModified], [x].[MadeIn], [x].[Model], [x].[Name], [x].[Price], [x].[ProductStatus], [x].[Status]
+FROM [Products] AS [x]
+WHERE ([x].[CategoryId] = @__categoryId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[Name]" (0723d8ff)
+2020-08-30T10:11:47.8885120+09:00 0HM2CG6LANGAF:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__parentId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] = @__parentId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:11:47.8943829+09:00 0HM2CG6LANGAF:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__categoryId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[CategoryId], [x].[Comment], [x].[DateCreated], [x].[DateModified], [x].[MadeIn], [x].[Model], [x].[Name], [x].[Price], [x].[ProductStatus], [x].[Status]
+FROM [Products] AS [x]
+WHERE ([x].[CategoryId] = @__categoryId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[Name]" (0723d8ff)
+2020-08-30T10:11:47.8967576+09:00 0HM2CG6LANGAF:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__parentId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] = @__parentId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:11:47.8990333+09:00 0HM2CG6LANGAF:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__parentId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] = @__parentId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:11:47.9524339+09:00 0HM2CG6LANGAF:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [x].[Id], [x].[Name], [x].[Status], [x].[Value1], [x].[Value2], [x].[Value3], [x].[Value4], [x].[Value5]
+FROM [SystemConfigs] AS [x]
+WHERE [x].[Id] = @__id_0" (0723d8ff)
+2020-08-30T10:11:47.9779878+09:00 0HM2CG6LANGAF:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [x].[Id], [x].[Name], [x].[Status], [x].[Value1], [x].[Value2], [x].[Value3], [x].[Value4], [x].[Value5]
+FROM [SystemConfigs] AS [x]
+WHERE [x].[Id] = @__id_0" (0723d8ff)
+2020-08-30T10:11:47.9818490+09:00 0HM2CG6LANGAF:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [x].[Id], [x].[Name], [x].[Status], [x].[Value1], [x].[Value2], [x].[Value3], [x].[Value4], [x].[Value5]
+FROM [SystemConfigs] AS [x]
+WHERE [x].[Id] = @__id_0" (0723d8ff)
+2020-08-30T10:11:51.4143135+09:00 0HM2CG6LANGAF:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2020-08-30T10:11:51.5690093+09:00 0HM2CG6LANGAF:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 4058.6689ms (afa2e885)
+2020-08-30T10:11:51.6099755+09:00 0HM2CG6LANGAG:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/bootstrap.min.css   (ca22a1cb)
+2020-08-30T10:11:51.6321808+09:00 0HM2CG6LANGAE:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/LineIcons.css   (ca22a1cb)
+2020-08-30T10:11:51.6383934+09:00 0HM2CG6LANGAH:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/magnific-popup.css   (ca22a1cb)
+2020-08-30T10:11:51.6473625+09:00 0HM2CG6LANGAI:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/animate.css   (ca22a1cb)
+2020-08-30T10:11:51.6484647+09:00 0HM2CG6LANGAF:00000001 [INF] Request finished in 4455.5917ms 200 text/html; charset=utf-8 (791a596a)
+2020-08-30T10:11:51.6532803+09:00 0HM2CG6LANGAO:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/table-responesite.css   (ca22a1cb)
+2020-08-30T10:11:51.6556283+09:00 0HM2CG6LANGAP:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/slick.css   (ca22a1cb)
+2020-08-30T10:11:51.6586095+09:00 0HM2CG6LANGAJ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/default.css   (ca22a1cb)
+2020-08-30T10:11:51.6606478+09:00 0HM2CG6LANGAK:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/style.css   (ca22a1cb)
+2020-08-30T10:11:51.6624179+09:00 0HM2CG6LANGAM:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/vendor/modernizr-3.6.0.min.js   (ca22a1cb)
+2020-08-30T10:11:51.6738698+09:00 0HM2CG6LANGAE:00000002 [INF] Sending file. Request path: '"/assets/css/LineIcons.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\LineIcons.css"' (27b0a520)
+2020-08-30T10:11:51.6754201+09:00 0HM2CG6LANGAH:00000001 [INF] Sending file. Request path: '"/assets/css/magnific-popup.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\magnific-popup.css"' (27b0a520)
+2020-08-30T10:11:51.6765788+09:00 0HM2CG6LANGAM:00000001 [INF] Sending file. Request path: '"/assets/js/vendor/modernizr-3.6.0.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\vendor\modernizr-3.6.0.min.js"' (27b0a520)
+2020-08-30T10:11:51.6807178+09:00 0HM2CG6LANGAI:00000001 [INF] Sending file. Request path: '"/assets/css/animate.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\animate.css"' (27b0a520)
+2020-08-30T10:11:51.6835984+09:00 0HM2CG6LANGAP:00000001 [INF] Sending file. Request path: '"/assets/css/slick.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\slick.css"' (27b0a520)
+2020-08-30T10:11:51.6842529+09:00 0HM2CG6LANGAO:00000001 [INF] Sending file. Request path: '"/assets/css/table-responesite.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\table-responesite.css"' (27b0a520)
+2020-08-30T10:11:51.6870501+09:00 0HM2CG6LANGAJ:00000001 [INF] Sending file. Request path: '"/assets/css/default.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\default.css"' (27b0a520)
+2020-08-30T10:11:51.6876744+09:00 0HM2CG6LANGAK:00000001 [INF] Sending file. Request path: '"/assets/css/style.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\style.css"' (27b0a520)
+2020-08-30T10:11:51.6899691+09:00 0HM2CG6LANGAG:00000001 [INF] Sending file. Request path: '"/assets/css/bootstrap.min.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\bootstrap.min.css"' (27b0a520)
+2020-08-30T10:11:51.7247375+09:00 0HM2CG6LANGAM:00000001 [INF] Request finished in 61.0432ms 200 application/javascript (791a596a)
+2020-08-30T10:11:51.7254088+09:00 0HM2CG6LANGAE:00000002 [INF] Request finished in 137.4643ms 200 text/css (791a596a)
+2020-08-30T10:11:51.7266227+09:00 0HM2CG6LANGAH:00000001 [INF] Request finished in 107.3741ms 200 text/css (791a596a)
+2020-08-30T10:11:51.7363833+09:00 0HM2CG6LANGAV:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/imagesloaded.pkgd.min.js   (ca22a1cb)
+2020-08-30T10:11:51.7374043+09:00 0HM2CG6LANGB0:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/jquery.easing.min.js   (ca22a1cb)
+2020-08-30T10:11:51.7384663+09:00 0HM2CG6LANGAU:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/jquery.magnific-popup.min.js   (ca22a1cb)
+2020-08-30T10:11:51.7432695+09:00 0HM2CG6LANGAV:00000001 [INF] Sending file. Request path: '"/assets/js/imagesloaded.pkgd.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\imagesloaded.pkgd.min.js"' (27b0a520)
+2020-08-30T10:11:51.7459751+09:00 0HM2CG6LANGB0:00000001 [INF] Sending file. Request path: '"/assets/js/jquery.easing.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\jquery.easing.min.js"' (27b0a520)
+2020-08-30T10:11:51.7473572+09:00 0HM2CG6LANGAR:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/popper.min.js   (ca22a1cb)
+2020-08-30T10:11:51.7479777+09:00 0HM2CG6LANGAU:00000001 [INF] Sending file. Request path: '"/assets/js/jquery.magnific-popup.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\jquery.magnific-popup.min.js"' (27b0a520)
+2020-08-30T10:11:51.7523348+09:00 0HM2CG6LANGAO:00000001 [INF] Request finished in 70.4792ms 200 text/css (791a596a)
+2020-08-30T10:11:51.7532827+09:00 0HM2CG6LANGAR:00000001 [INF] Sending file. Request path: '"/assets/js/popper.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\popper.min.js"' (27b0a520)
+2020-08-30T10:11:51.7558820+09:00 0HM2CG6LANGAP:00000001 [INF] Request finished in 69.2568ms 200 text/css (791a596a)
+2020-08-30T10:11:51.7608997+09:00 0HM2CG6LANGAV:00000001 [INF] Request finished in 24.3563ms 200 application/javascript (791a596a)
+2020-08-30T10:11:51.7625034+09:00 0HM2CG6LANGB0:00000001 [INF] Request finished in 23.7148ms 200 application/javascript (791a596a)
+2020-08-30T10:11:51.7669937+09:00 0HM2CG6LANGAU:00000001 [INF] Request finished in 24.9861ms 200 application/javascript (791a596a)
+2020-08-30T10:11:51.7712630+09:00 0HM2CG6LANGAL:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/clock.css   (ca22a1cb)
+2020-08-30T10:11:51.7753343+09:00 0HM2CG6LANGAN:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/vendor/jquery-1.12.4.min.js   (ca22a1cb)
+2020-08-30T10:11:51.7764291+09:00 0HM2CG6LANGAT:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/slick.min.js   (ca22a1cb)
+2020-08-30T10:11:51.7770055+09:00 0HM2CG6LANGAL:00000001 [INF] Sending file. Request path: '"/assets/css/clock.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\clock.css"' (27b0a520)
+2020-08-30T10:11:51.7816805+09:00 0HM2CG6LANGAN:00000001 [INF] Sending file. Request path: '"/assets/js/vendor/jquery-1.12.4.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\vendor\jquery-1.12.4.min.js"' (27b0a520)
+2020-08-30T10:11:51.7835163+09:00 0HM2CG6LANGAR:00000001 [INF] Request finished in 37.7647ms 200 application/javascript (791a596a)
+2020-08-30T10:11:51.7858108+09:00 0HM2CG6LANGAT:00000001 [INF] Sending file. Request path: '"/assets/js/slick.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\slick.min.js"' (27b0a520)
+2020-08-30T10:11:51.7892073+09:00 0HM2CG6LANGB3:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/images/logo.png   (ca22a1cb)
+2020-08-30T10:11:51.7911312+09:00 0HM2CG6LANGB4:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/images/logo-alt.png   (ca22a1cb)
+2020-08-30T10:11:51.8016305+09:00 0HM2CG6LANGB4:00000001 [INF] Sending file. Request path: '"/assets/images/logo-alt.png"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\images\logo-alt.png"' (27b0a520)
+2020-08-30T10:11:51.8038571+09:00 0HM2CG6LANGB5:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/main.js   (ca22a1cb)
+2020-08-30T10:11:51.8048485+09:00 0HM2CG6LANGAT:00000001 [INF] Request finished in 22.9282ms 200 application/javascript (791a596a)
+2020-08-30T10:11:51.8054308+09:00 0HM2CG6LANGB1:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/scrolling-nav.js   (ca22a1cb)
+2020-08-30T10:11:51.8072225+09:00 0HM2CG6LANGB3:00000001 [INF] Sending file. Request path: '"/assets/images/logo.png"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\images\logo.png"' (27b0a520)
+2020-08-30T10:11:51.8131334+09:00 0HM2CG6LANGB5:00000001 [INF] Sending file. Request path: '"/assets/js/main.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\main.js"' (27b0a520)
+2020-08-30T10:11:51.8165370+09:00 0HM2CG6LANGB4:00000001 [INF] Request finished in 25.0496ms 200 image/png (791a596a)
+2020-08-30T10:11:51.8179075+09:00 0HM2CG6LANGB1:00000001 [INF] Sending file. Request path: '"/assets/js/scrolling-nav.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\scrolling-nav.js"' (27b0a520)
+2020-08-30T10:11:51.8231189+09:00 0HM2CG6LANGB2:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/wow.min.js   (ca22a1cb)
+2020-08-30T10:11:51.8293009+09:00 0HM2CG6LANGB6:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/clock.js   (ca22a1cb)
+2020-08-30T10:11:51.8398947+09:00 0HM2CG6LANGB5:00000001 [INF] Request finished in 29.0124ms 200 application/javascript (791a596a)
+2020-08-30T10:11:51.8612753+09:00 0HM2CG6LANGB6:00000001 [INF] Sending file. Request path: '"/assets/js/clock.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\clock.js"' (27b0a520)
+2020-08-30T10:11:51.8646142+09:00 0HM2CG6LANGB2:00000001 [INF] Sending file. Request path: '"/assets/js/wow.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\wow.min.js"' (27b0a520)
+2020-08-30T10:11:51.8734140+09:00 0HM2CG6LANGB1:00000001 [INF] Request finished in 38.7492ms 200 application/javascript (791a596a)
+2020-08-30T10:11:51.8752365+09:00 0HM2CG6LANGAL:00000001 [INF] Request finished in 99.1311ms 200 text/css (791a596a)
+2020-08-30T10:11:51.8803218+09:00 0HM2CG6LANGAK:00000001 [INF] Request finished in 234.6536ms 200 text/css (791a596a)
+2020-08-30T10:11:51.8832780+09:00 0HM2CG6LANGB2:00000001 [INF] Request finished in 58.7451ms 200 application/javascript (791a596a)
+2020-08-30T10:11:51.8884399+09:00 0HM2CG6LANGAI:00000001 [INF] Request finished in 249.3789ms 200 text/css (791a596a)
+2020-08-30T10:11:51.8944702+09:00 0HM2CG6LANGAN:00000001 [INF] Request finished in 119.7895ms 200 application/javascript (791a596a)
+2020-08-30T10:11:51.9002951+09:00 0HM2CG6LANGB6:00000001 [INF] Request finished in 66.9041ms 200 application/javascript (791a596a)
+2020-08-30T10:11:51.9009053+09:00 0HM2CG6LANGAG:00000001 [INF] Request finished in 309.5116ms 200 text/css (791a596a)
+2020-08-30T10:11:51.9021272+09:00 0HM2CG6LANGB3:00000001 [INF] Request finished in 56.747ms 200 image/png (791a596a)
+2020-08-30T10:11:51.9134304+09:00 0HM2CG6LANGAQ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/bootstrap.min.js   (ca22a1cb)
+2020-08-30T10:11:51.9171867+09:00 0HM2CG6LANGAJ:00000001 [INF] Request finished in 82.6786ms 200 text/css (791a596a)
+2020-08-30T10:11:51.9192189+09:00 0HM2CG6LANGAF:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/img/alarm_light.jpg   (ca22a1cb)
+2020-08-30T10:11:51.9199111+09:00 0HM2CG6LANGAQ:00000001 [INF] Sending file. Request path: '"/assets/js/bootstrap.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\bootstrap.min.js"' (27b0a520)
+2020-08-30T10:11:51.9310909+09:00 0HM2CG6LANGAS:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/isotope.pkgd.min.js   (ca22a1cb)
+2020-08-30T10:11:51.9356222+09:00 0HM2CG6LANGAQ:00000001 [INF] Request finished in 204.7077ms 200 application/javascript (791a596a)
+2020-08-30T10:11:51.9373759+09:00 0HM2CG6LANGAS:00000001 [INF] Sending file. Request path: '"/assets/js/isotope.pkgd.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\isotope.pkgd.min.js"' (27b0a520)
+2020-08-30T10:11:51.9441536+09:00 0HM2CG6LANGAS:00000001 [INF] Request finished in 214.7753ms 200 application/javascript (791a596a)
+2020-08-30T10:11:51.9448193+09:00 0HM2CG6LANGAF:00000002 [INF] Request finished in 28.258ms 404  (791a596a)
+2020-08-30T10:11:51.9807253+09:00 0HM2CG6LANGAO:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/fonts/LineIcons.ttf?y2l643   (ca22a1cb)
+2020-08-30T10:11:51.9842078+09:00 0HM2CG6LANGAO:00000002 [INF] Sending file. Request path: '"/assets/fonts/LineIcons.ttf"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\fonts\LineIcons.ttf"' (27b0a520)
+2020-08-30T10:11:51.9907540+09:00 0HM2CG6LANGAO:00000002 [INF] Request finished in 8.7566ms 200 application/x-font-ttf (791a596a)
+2020-08-30T10:19:15.1759983+09:00  [WRN] No type was specified for the decimal column '"Balance"' on entity type '"AppUser"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-08-30T10:19:15.1839968+09:00  [WRN] No type was specified for the decimal column '"Value5"' on entity type '"SystemConfig"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-08-30T10:19:15.2601075+09:00  [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2020-08-30T10:19:15.6496717+09:00  [INF] Executed DbCommand ("34"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T10:19:15.6947146+09:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T10:19:15.7117902+09:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2020-08-30T10:19:15.7178621+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Slides] AS [s]" (0723d8ff)
+2020-08-30T10:19:15.7223899+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ContactDetails] AS [c]" (0723d8ff)
+2020-08-30T10:19:15.7270116+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2020-08-30T10:19:15.7748861+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T10:19:15.7793532+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T10:19:15.7835047+09:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2020-08-30T10:19:16.2414724+09:00 0HM2CGAR4U2T6:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2020-08-30T10:19:16.2405353+09:00 0HM2CGAR4U2T5:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50638/  0 (ca22a1cb)
+2020-08-30T10:19:16.2979681+09:00 0HM2CGAR4U2T5:00000001 [INF] Request finished in 85.3316ms 200  (791a596a)
+2020-08-30T10:19:16.5768485+09:00 0HM2CGAR4U2T6:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-08-30T10:19:16.5877851+09:00 0HM2CGAR4U2T6:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2020-08-30T10:19:16.6301897+09:00 0HM2CGAR4U2T6:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Content], [x].[Description], [x].[DisplayOrder], [x].[Image], [x].[Name], [x].[OrtherPageHome], [x].[Status], [x].[Url]
+FROM [Slides] AS [x]
+WHERE [x].[Status] = 1
+ORDER BY [x].[DisplayOrder]" (0723d8ff)
+2020-08-30T10:19:16.7508640+09:00 0HM2CGAR4U2T6:00000001 [INF] Executed DbCommand ("29"ms) [Parameters=["@__HomeFag_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] IS NULL AND ([x].[HomeFlag] = @__HomeFag_0)) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:19:16.7893471+09:00 0HM2CGAR4U2T6:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__HomeFag_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] IS NULL AND ([x].[HomeFlag] = @__HomeFag_0)) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:19:16.8048363+09:00 0HM2CGAR4U2T6:00000001 [WRN] Query: '"(from Contact <generated>_1 in DbSet<Contact> select [<generated>_1]).FirstOrDefault()"' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results. (6af4db4b)
+2020-08-30T10:19:16.8175181+09:00 0HM2CGAR4U2T6:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[Address], [c].[Bank1], [c].[Bank2], [c].[Bank3], [c].[Email], [c].[Name], [c].[Phone], [c].[Status]
+FROM [ContactDetails] AS [c]" (0723d8ff)
+2020-08-30T10:19:16.8438905+09:00 0HM2CGAR4U2T6:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[Status] = 1) AND [x].[ParentId] IS NULL
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:19:16.8530501+09:00 0HM2CGAR4U2T6:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__parentId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] = @__parentId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:19:16.8736200+09:00 0HM2CGAR4U2T6:00000001 [INF] Executed DbCommand ("12"ms) [Parameters=["@__categoryId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[CategoryId], [x].[Comment], [x].[DateCreated], [x].[DateModified], [x].[MadeIn], [x].[Model], [x].[Name], [x].[Price], [x].[ProductStatus], [x].[Status]
+FROM [Products] AS [x]
+WHERE ([x].[CategoryId] = @__categoryId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[Name]" (0723d8ff)
+2020-08-30T10:19:16.9116660+09:00 0HM2CGAR4U2T6:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__categoryId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[CategoryId], [x].[Comment], [x].[DateCreated], [x].[DateModified], [x].[MadeIn], [x].[Model], [x].[Name], [x].[Price], [x].[ProductStatus], [x].[Status]
+FROM [Products] AS [x]
+WHERE ([x].[CategoryId] = @__categoryId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[Name]" (0723d8ff)
+2020-08-30T10:19:16.9158085+09:00 0HM2CGAR4U2T6:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__parentId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] = @__parentId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:19:16.9238284+09:00 0HM2CGAR4U2T6:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__categoryId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[CategoryId], [x].[Comment], [x].[DateCreated], [x].[DateModified], [x].[MadeIn], [x].[Model], [x].[Name], [x].[Price], [x].[ProductStatus], [x].[Status]
+FROM [Products] AS [x]
+WHERE ([x].[CategoryId] = @__categoryId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[Name]" (0723d8ff)
+2020-08-30T10:19:16.9278949+09:00 0HM2CGAR4U2T6:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__parentId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] = @__parentId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:19:16.9317368+09:00 0HM2CGAR4U2T6:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__parentId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+WHERE ([x].[ParentId] = @__parentId_0) AND ([x].[Status] = 1)
+ORDER BY [x].[SortOrder]" (0723d8ff)
+2020-08-30T10:19:16.9876400+09:00 0HM2CGAR4U2T6:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [x].[Id], [x].[Name], [x].[Status], [x].[Value1], [x].[Value2], [x].[Value3], [x].[Value4], [x].[Value5]
+FROM [SystemConfigs] AS [x]
+WHERE [x].[Id] = @__id_0" (0723d8ff)
+2020-08-30T10:19:17.0140274+09:00 0HM2CGAR4U2T6:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [x].[Id], [x].[Name], [x].[Status], [x].[Value1], [x].[Value2], [x].[Value3], [x].[Value4], [x].[Value5]
+FROM [SystemConfigs] AS [x]
+WHERE [x].[Id] = @__id_0" (0723d8ff)
+2020-08-30T10:19:17.0180179+09:00 0HM2CGAR4U2T6:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [x].[Id], [x].[Name], [x].[Status], [x].[Value1], [x].[Value2], [x].[Value3], [x].[Value4], [x].[Value5]
+FROM [SystemConfigs] AS [x]
+WHERE [x].[Id] = @__id_0" (0723d8ff)
+2020-08-30T10:19:20.4090467+09:00 0HM2CGAR4U2T6:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2020-08-30T10:19:20.5617996+09:00 0HM2CGAR4U2T6:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 4011.8433ms (afa2e885)
+2020-08-30T10:19:20.5811687+09:00 0HM2CGAR4U2T7:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/LineIcons.css   (ca22a1cb)
+2020-08-30T10:19:20.5831508+09:00 0HM2CGAR4U2T8:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/animate.css   (ca22a1cb)
+2020-08-30T10:19:20.5851839+09:00 0HM2CGAR4U2T5:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/bootstrap.min.css   (ca22a1cb)
+2020-08-30T10:19:20.5918527+09:00 0HM2CGAR4U2TC:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/slick.css   (ca22a1cb)
+2020-08-30T10:19:20.5949392+09:00 0HM2CGAR4U2TD:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/clock.css   (ca22a1cb)
+2020-08-30T10:19:20.5996866+09:00 0HM2CGAR4U2T9:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/magnific-popup.css   (ca22a1cb)
+2020-08-30T10:19:20.6014343+09:00 0HM2CGAR4U2TA:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/table-responesite.css   (ca22a1cb)
+2020-08-30T10:19:20.6042592+09:00 0HM2CGAR4U2TB:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/default.css   (ca22a1cb)
+2020-08-30T10:19:20.6121294+09:00 0HM2CGAR4U2T6:00000001 [INF] Request finished in 4399.728ms 200 text/html; charset=utf-8 (791a596a)
+2020-08-30T10:19:20.6169492+09:00 0HM2CGAR4U2TE:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/css/style.css   (ca22a1cb)
+2020-08-30T10:19:20.6278046+09:00 0HM2CGAR4U2T7:00000001 [INF] Sending file. Request path: '"/assets/css/LineIcons.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\LineIcons.css"' (27b0a520)
+2020-08-30T10:19:20.6284789+09:00 0HM2CGAR4U2TE:00000001 [INF] Sending file. Request path: '"/assets/css/style.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\style.css"' (27b0a520)
+2020-08-30T10:19:20.6302637+09:00 0HM2CGAR4U2T8:00000001 [INF] Sending file. Request path: '"/assets/css/animate.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\animate.css"' (27b0a520)
+2020-08-30T10:19:20.6340125+09:00 0HM2CGAR4U2T5:00000002 [INF] Sending file. Request path: '"/assets/css/bootstrap.min.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\bootstrap.min.css"' (27b0a520)
+2020-08-30T10:19:20.6357435+09:00 0HM2CGAR4U2TC:00000001 [INF] Sending file. Request path: '"/assets/css/slick.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\slick.css"' (27b0a520)
+2020-08-30T10:19:20.6374966+09:00 0HM2CGAR4U2TD:00000001 [INF] Sending file. Request path: '"/assets/css/clock.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\clock.css"' (27b0a520)
+2020-08-30T10:19:20.6412285+09:00 0HM2CGAR4U2T9:00000001 [INF] Sending file. Request path: '"/assets/css/magnific-popup.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\magnific-popup.css"' (27b0a520)
+2020-08-30T10:19:20.6426037+09:00 0HM2CGAR4U2TA:00000001 [INF] Sending file. Request path: '"/assets/css/table-responesite.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\table-responesite.css"' (27b0a520)
+2020-08-30T10:19:20.6450071+09:00 0HM2CGAR4U2TB:00000001 [INF] Sending file. Request path: '"/assets/css/default.css"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\css\default.css"' (27b0a520)
+2020-08-30T10:19:20.6813078+09:00 0HM2CGAR4U2T7:00000001 [INF] Request finished in 102.9931ms 200 text/css (791a596a)
+2020-08-30T10:19:20.6820061+09:00 0HM2CGAR4U2TC:00000001 [INF] Request finished in 94.8464ms 200 text/css (791a596a)
+2020-08-30T10:19:20.6871898+09:00 0HM2CGAR4U2TF:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/vendor/modernizr-3.6.0.min.js   (ca22a1cb)
+2020-08-30T10:19:20.6895230+09:00 0HM2CGAR4U2TG:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/vendor/jquery-1.12.4.min.js   (ca22a1cb)
+2020-08-30T10:19:20.6928254+09:00 0HM2CGAR4U2TI:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/isotope.pkgd.min.js   (ca22a1cb)
+2020-08-30T10:19:20.6974183+09:00 0HM2CGAR4U2TH:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/bootstrap.min.js   (ca22a1cb)
+2020-08-30T10:19:20.6994014+09:00 0HM2CGAR4U2TF:00000001 [INF] Sending file. Request path: '"/assets/js/vendor/modernizr-3.6.0.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\vendor\modernizr-3.6.0.min.js"' (27b0a520)
+2020-08-30T10:19:20.7006507+09:00 0HM2CGAR4U2TG:00000001 [INF] Sending file. Request path: '"/assets/js/vendor/jquery-1.12.4.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\vendor\jquery-1.12.4.min.js"' (27b0a520)
+2020-08-30T10:19:20.7023970+09:00 0HM2CGAR4U2TI:00000001 [INF] Sending file. Request path: '"/assets/js/isotope.pkgd.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\isotope.pkgd.min.js"' (27b0a520)
+2020-08-30T10:19:20.7071763+09:00 0HM2CGAR4U2TH:00000001 [INF] Sending file. Request path: '"/assets/js/bootstrap.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\bootstrap.min.js"' (27b0a520)
+2020-08-30T10:19:20.7110641+09:00 0HM2CGAR4U2TD:00000001 [INF] Request finished in 93.1067ms 200 text/css (791a596a)
+2020-08-30T10:19:20.7186426+09:00 0HM2CGAR4U2TI:00000001 [INF] Request finished in 25.5211ms 200 application/javascript (791a596a)
+2020-08-30T10:19:20.7204728+09:00 0HM2CGAR4U2TF:00000001 [INF] Request finished in 29.9392ms 200 application/javascript (791a596a)
+2020-08-30T10:19:20.7275972+09:00 0HM2CGAR4U2TO:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/scrolling-nav.js   (ca22a1cb)
+2020-08-30T10:19:20.7320317+09:00 0HM2CGAR4U2TM:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/imagesloaded.pkgd.min.js   (ca22a1cb)
+2020-08-30T10:19:20.7330575+09:00 0HM2CGAR4U2TQ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/wow.min.js   (ca22a1cb)
+2020-08-30T10:19:20.7335573+09:00 0HM2CGAR4U2TO:00000001 [INF] Sending file. Request path: '"/assets/js/scrolling-nav.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\scrolling-nav.js"' (27b0a520)
+2020-08-30T10:19:20.7353379+09:00 0HM2CGAR4U2TL:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/slick.min.js   (ca22a1cb)
+2020-08-30T10:19:20.7387139+09:00 0HM2CGAR4U2TK:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/popper.min.js   (ca22a1cb)
+2020-08-30T10:19:20.7399431+09:00 0HM2CGAR4U2TM:00000001 [INF] Sending file. Request path: '"/assets/js/imagesloaded.pkgd.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\imagesloaded.pkgd.min.js"' (27b0a520)
+2020-08-30T10:19:20.7418681+09:00 0HM2CGAR4U2TQ:00000001 [INF] Sending file. Request path: '"/assets/js/wow.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\wow.min.js"' (27b0a520)
+2020-08-30T10:19:20.7461715+09:00 0HM2CGAR4U2TL:00000001 [INF] Sending file. Request path: '"/assets/js/slick.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\slick.min.js"' (27b0a520)
+2020-08-30T10:19:20.7486008+09:00 0HM2CGAR4U2TO:00000001 [INF] Request finished in 21.43ms 200 application/javascript (791a596a)
+2020-08-30T10:19:20.7499587+09:00 0HM2CGAR4U2TK:00000001 [INF] Sending file. Request path: '"/assets/js/popper.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\popper.min.js"' (27b0a520)
+2020-08-30T10:19:20.7561253+09:00 0HM2CGAR4U2TS:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/clock.js   (ca22a1cb)
+2020-08-30T10:19:20.7585414+09:00 0HM2CGAR4U2TP:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/images/logo-alt.png   (ca22a1cb)
+2020-08-30T10:19:20.7635546+09:00 0HM2CGAR4U2TS:00000001 [INF] Sending file. Request path: '"/assets/js/clock.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\clock.js"' (27b0a520)
+2020-08-30T10:19:20.7646067+09:00 0HM2CGAR4U2TR:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/jquery.easing.min.js   (ca22a1cb)
+2020-08-30T10:19:20.7651926+09:00 0HM2CGAR4U2TP:00000001 [INF] Sending file. Request path: '"/assets/images/logo-alt.png"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\images\logo-alt.png"' (27b0a520)
+2020-08-30T10:19:20.7698841+09:00 0HM2CGAR4U2TJ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/jquery.magnific-popup.min.js   (ca22a1cb)
+2020-08-30T10:19:20.7709690+09:00 0HM2CGAR4U2TR:00000001 [INF] Sending file. Request path: '"/assets/js/jquery.easing.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\jquery.easing.min.js"' (27b0a520)
+2020-08-30T10:19:20.7725965+09:00 0HM2CGAR4U2TK:00000001 [INF] Request finished in 50.0266ms 200 application/javascript (791a596a)
+2020-08-30T10:19:20.7787183+09:00 0HM2CGAR4U2TS:00000001 [INF] Request finished in 22.754ms 200 application/javascript (791a596a)
+2020-08-30T10:19:20.7793344+09:00 0HM2CGAR4U2TT:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/js/main.js   (ca22a1cb)
+2020-08-30T10:19:20.7803226+09:00 0HM2CGAR4U2TJ:00000001 [INF] Sending file. Request path: '"/assets/js/jquery.magnific-popup.min.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\jquery.magnific-popup.min.js"' (27b0a520)
+2020-08-30T10:19:20.7869491+09:00 0HM2CGAR4U2TT:00000001 [INF] Sending file. Request path: '"/assets/js/main.js"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\js\main.js"' (27b0a520)
+2020-08-30T10:19:20.7887191+09:00 0HM2CGAR4U2TN:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/images/logo.png   (ca22a1cb)
+2020-08-30T10:19:20.7907997+09:00 0HM2CGAR4U2T9:00000001 [INF] Request finished in 98.7266ms 200 text/css (791a596a)
+2020-08-30T10:19:20.7976894+09:00 0HM2CGAR4U2TH:00000001 [INF] Request finished in 107.9439ms 200 application/javascript (791a596a)
+2020-08-30T10:19:20.7996601+09:00 0HM2CGAR4U2TN:00000001 [INF] Sending file. Request path: '"/assets/images/logo.png"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\images\logo.png"' (27b0a520)
+2020-08-30T10:19:20.8054493+09:00 0HM2CGAR4U2TT:00000001 [INF] Request finished in 21.4916ms 200 application/javascript (791a596a)
+2020-08-30T10:19:20.8083182+09:00 0HM2CGAR4U2TM:00000001 [INF] Request finished in 71.5689ms 200 application/javascript (791a596a)
+2020-08-30T10:19:20.8142833+09:00 0HM2CGAR4U2TP:00000001 [INF] Request finished in 47.8203ms 200 image/png (791a596a)
+2020-08-30T10:19:20.8190828+09:00 0HM2CGAR4U2TR:00000001 [INF] Request finished in 58.0359ms 200 application/javascript (791a596a)
+2020-08-30T10:19:20.8202936+09:00 0HM2CGAR4U2TJ:00000001 [INF] Request finished in 62.1216ms 200 application/javascript (791a596a)
+2020-08-30T10:19:20.8254132+09:00 0HM2CGAR4U2T8:00000001 [INF] Request finished in 248.5514ms 200 text/css (791a596a)
+2020-08-30T10:19:20.8304160+09:00 0HM2CGAR4U2TG:00000001 [INF] Request finished in 143.4996ms 200 application/javascript (791a596a)
+2020-08-30T10:19:20.8310861+09:00 0HM2CGAR4U2TE:00000001 [INF] Request finished in 212.3516ms 200 text/css (791a596a)
+2020-08-30T10:19:20.8381004+09:00 0HM2CGAR4U2TN:00000001 [INF] Request finished in 55.358ms 200 image/png (791a596a)
+2020-08-30T10:19:20.8386739+09:00 0HM2CGAR4U2T5:00000002 [INF] Request finished in 260.9616ms 200 text/css (791a596a)
+2020-08-30T10:19:20.8404973+09:00 0HM2CGAR4U2TL:00000001 [INF] Request finished in 82.4337ms 200 application/javascript (791a596a)
+2020-08-30T10:19:20.8467101+09:00 0HM2CGAR4U2TA:00000001 [INF] Request finished in 98.5321ms 200 text/css (791a596a)
+2020-08-30T10:19:20.8473783+09:00 0HM2CGAR4U2TQ:00000001 [INF] Request finished in 71.555ms 200 application/javascript (791a596a)
+2020-08-30T10:19:20.8519244+09:00 0HM2CGAR4U2TB:00000001 [INF] Request finished in 98.4764ms 200 text/css (791a596a)
+2020-08-30T10:19:20.8848853+09:00 0HM2CGAR4U2T6:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/img/alarm_light.jpg   (ca22a1cb)
+2020-08-30T10:19:20.8925685+09:00 0HM2CGAR4U2T6:00000002 [INF] Request finished in 7.6459ms 404  (791a596a)
+2020-08-30T10:19:20.9827342+09:00 0HM2CGAR4U2TC:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44356/assets/fonts/LineIcons.ttf?y2l643   (ca22a1cb)
+2020-08-30T10:19:20.9863393+09:00 0HM2CGAR4U2TC:00000002 [INF] Sending file. Request path: '"/assets/fonts/LineIcons.ttf"'. Physical path: '"C:\Users\ngvan\Documents\Ngvanphong\TeduCoreApp\TeduCoreApp\wwwroot\assets\fonts\LineIcons.ttf"' (27b0a520)
+2020-08-30T10:19:20.9945164+09:00 0HM2CGAR4U2TC:00000002 [INF] Request finished in 9.5033ms 200 application/x-font-ttf (791a596a)
