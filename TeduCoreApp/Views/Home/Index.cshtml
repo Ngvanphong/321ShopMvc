@@ -105,7 +105,8 @@
                                         {
                             <li class="nav-item">
                                 <a class="page-scroll" href="#@productCate.SeoAlias">@productCate.Name</a>
-                            </li> } }
+                            </li>
+ } }
 
                                 </ul>
                             </div>
@@ -184,8 +185,7 @@ firstSlide += 1;
                     <li><a href="#">LIÊN HỆ</a></li>
                     @{ foreach (ProductCategoryViewModel cate2 in Model.ListCategoryNotHomeFlag)
                         {
-            <li><a href="#@cate2.SeoAlias">@cate2.Name</a></li>
- } }
+            <li><a href="#@cate2.SeoAlias">@cate2.Name</a></li> } }
                 </ul>
             </div> <!-- menu -->
         </div> <!-- content -->
@@ -277,18 +277,21 @@ firstSlide += 1;
                                         <th>Tên Sản Phẩm</th>
                                         <th>Đơn Giá</th>
                                         <th>Tình Trạng</th>
+                                        <th>Model</th>
                                         <th>Xuất Xứ</th>
                                         <th>Ghi Chú</th>
                                     </tr>
                                     @{ foreach (ProductViewModel product in productSub.ListProduct)
                                         {
-                    <tr>
-                        <td>@product.Name</td>
-                        <td>@product.Price</td>
-                        <td>@product.ProductStatus</td>
-                        <td>@product.MadeIn</td>
-                        <td>@product.Comment</td>
-                    </tr> } }
+                                                                        <tr>
+                                                                            <td>@product.Name</td>
+                                                                            <td>@product.Price</td>
+                                                                            <td>@product.ProductStatus</td>
+                                                                            <td>@product.Model</td>
+                                                                            <td>@product.MadeIn</td>
+                                                                            <td>@product.Comment</td>
+                                                                        </tr>
+ } }
 
                                 </table>
                             </div> <!-- single portfolio -->
@@ -298,6 +301,37 @@ firstSlide += 1;
     </section>
 
     <footer id="footer" class="footer-area">
+        <div class="footer-widget">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="footer-link">
+                            <h6 class="footer-title">Thông tin liên hệ</h6>
+                            <ul>
+                                <li><a href="#"><strong>@Model.Contact.Address</strong></a></li>
+                                <li><a href="#">Điện thoại:<strong>@Model.Contact.Phone</strong> </a></li>
+                                <li><a href="#">Email:<strong>@Model.Contact.Email</strong></a></li>
+                            </ul>
+                        </div> <!-- footer link -->
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="footer-link">
+                            <h6 class="footer-title">Chính sách</h6>
+                            <ul>
+                                <li><a href="/page.html?=bao-hanh" target="_blank"><strong>Bảo hành</strong></a></li>
+                            </ul>
+                        </div> <!-- footer link -->
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="footer-link">
+                            <img src="assets/images/bocongthuong.png" alt="Bocongthuong">
+                        </div> <!-- footer link -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div>
+
+
         <div class="footer-copyright">
             <div class="container">
                 <div class="row align-items-center">
@@ -356,8 +390,7 @@ firstSlide += 1;
 
 
 
-    <div  class="zalo-chat-widget" data-oaid="579745863508352884" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="350" data-height="420"></div>
-
+    <div class="zalo-chat-widget" data-oaid="579745863508352884" data-welcome-message="621store.vn rất vui khi được hỗ trợ bạn. Bạn có câu hỏi nào xin nhấn vào đây, shop sẽ trả lời trong thời gian sớm nhất!" data-autopopup="5" data-width="350" data-height="420"></div>
     <script src="https://sp.zalo.me/plugins/sdk.js"></script>
 
 
