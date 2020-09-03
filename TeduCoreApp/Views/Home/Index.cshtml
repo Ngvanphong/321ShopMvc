@@ -47,11 +47,13 @@
 
     <!--====== Clock css ======-->
     <link rel="stylesheet" href="~/assets/css/table-responesite.css">
+
+    <link rel="stylesheet" href="~/assets/css/zalo.css">
     <style>
         .zalo-chat-widget {
             bottom: 20px !important;
             left: 20px !important;
-        }  
+        }
     </style>
 </head>
 
@@ -283,14 +285,14 @@ firstSlide += 1;
                                     </tr>
                                     @{ foreach (ProductViewModel product in productSub.ListProduct)
                                         {
-                                                                        <tr>
-                                                                            <td>@product.Name</td>
-                                                                            <td>@product.Price</td>
-                                                                            <td>@product.ProductStatus</td>
-                                                                            <td>@product.Model</td>
-                                                                            <td>@product.MadeIn</td>
-                                                                            <td>@product.Comment</td>
-                                                                        </tr>
+                    <tr>
+                        <td>@product.Name</td>
+                        <td>@product.Price</td>
+                        <td>@product.ProductStatus</td>
+                        <td>@product.Model</td>
+                        <td>@product.MadeIn</td>
+                        <td>@product.Comment</td>
+                    </tr>
  } }
 
                                 </table>
@@ -350,6 +352,16 @@ firstSlide += 1;
 
     <a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
 
+
+    <div class="float-contact">
+        <button class="chat-zalo">
+            <a href="http://zalo.me/0988046980">Zalo</a>
+        </button>
+        <button class="chat-face">
+            <a href="http://m.me/moosun.vn">Facebook</a>
+        </button>
+    </div>
+
     <!--====== BACK TOP TOP PART ENDS ======-->
     <!--====== PART START ======-->
     <!--====== PART ENDS ======-->
@@ -387,12 +399,6 @@ firstSlide += 1;
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
     <script src="~/assets/js/clock.js"></script>
     <!-- JavaScript Includes -->
-
-
-
-    <div class="zalo-chat-widget" data-oaid="579745863508352884" data-welcome-message="621store.vn rất vui khi được hỗ trợ bạn. Bạn có câu hỏi nào xin nhấn vào đây, shop sẽ trả lời trong thời gian sớm nhất!" data-autopopup="5" data-width="350" data-height="420"></div>
-    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
-
 
 </body>
 </html>
