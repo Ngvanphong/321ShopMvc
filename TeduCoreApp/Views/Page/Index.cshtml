@@ -2,21 +2,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        img {
-            width: 100%;
-            height: auto;
-        }
+    <style type="text/css">
+       
         .container {
             background: #fff;
             min-height: 800px;
         }
-        
+        @@media only screen and (max-width: 600px) {
+          img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
     </style>
 </head>
 <body>
-    <div class="container"> 
-        @Html.Raw(Model.Content)    
+    <div class="container">
+        @Html.Raw(Model.Content)
     </div>
 </body>
 </html>
