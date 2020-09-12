@@ -114,6 +114,12 @@ p {
     .section-title .title {
       font-size: 30px;
       line-height: 35px; } }
+@media (max-width: 767px) {
+    .section-title .title {
+        font-size: 20px;
+        line-height: 35px;
+    }
+}
 .section-title .text {
   font-size: 16px;
   line-height: 24px;
@@ -1507,8 +1513,8 @@ p {
       padding: 0 26px; } }
   @media (max-width: 767px) {
     .portfolio-menu ul li {
-      font-size: 14px;
-      padding: 0 22px;
+      font-size: 12px;
+      padding: 0 0px;
       line-height: 42px; } }
   .portfolio-menu ul li::before {
     position: absolute;

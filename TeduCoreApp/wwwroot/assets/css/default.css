@@ -18,6 +18,14 @@
 .mt-30 {
 	margin-top: 30px;
 }
+
+@media (max-width: 767px) {
+	.mt-30 {
+		margin-top: 5px;
+	}
+}
+
+
 .mt-35 {
 	margin-top: 35px;
 }
@@ -506,6 +514,13 @@
 .pt-30 {
 	padding-top: 30px;
 }
+
+@media (max-width: 767px) {
+	.pt-30 {
+		padding-top: 5px;
+	}
+}
+
 .pt-35 {
 	padding-top: 35px;
 }
@@ -621,7 +636,15 @@
 }
 .pb-20 {
 	padding-bottom: 20px;
+
 }
+
+@media (max-width: 767px) {
+	.pb-20 {
+		padding-bottom: 0px;
+	}
+}
+
 .pb-25 {
 	padding-bottom: 25px;
 }
